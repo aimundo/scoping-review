@@ -14,11 +14,13 @@ format:
     bibliography: references/refs.bib
 ---
 
-# Scoping Review
-
 ## Background
 
+Longitudinal experiments are frequent in the health sciences (biomedical research, epidemiology, public health) as they are able to provide a time-resolved view of biological processes. However, there analysis of longitudinal data can be complex as study design, missing data, and are factors that need to be considered in order to use a statistical analysis that is congruent with the experimental design and the limitations from the data itself. 
+
 ##  Objective
+
+This study aims to summarize the different statistical models used within the health sciences community to analyze longitudinal data, in order to understand the rationale for the choices used by the majority of researchers. In this way, the use of such models can be contextualized and the implications of such choices can be analyzed.  
 
 ## Review Question
 
