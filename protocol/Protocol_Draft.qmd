@@ -1,0 +1,41 @@
+---
+title: "Scoping Review Protocol: Statistical Models for Longitudinal Data"
+date: "`r Sys.Date()`"
+author: "Ariel I. Mundo Ortiz"
+affiliation: "Université de Montréal, Montreal, QC, Canada"
+format:
+  pdf:
+    keep-tex: true
+    documentclass: article
+    toc: true
+    number-sections: true
+    colorlinks: true
+    csl: references/american-medical-association.csl
+    bibliography: references/refs.bib
+---
+
+# Scoping Review
+
+## Background
+
+##  Objective
+
+## Review Question
+
+## Databases
+
+## Search Terms
+
+## Criteria
+
+### Inclusion Criteria
+
+### Exclusion Criteria
+
+### Additional Resources
+
+### Comparison (?)
+
+## Data Extraction
+
+### Data Synthesis Strategy
