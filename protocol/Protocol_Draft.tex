@@ -72,6 +72,29 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \makeatletter
 \makeatother
@@ -143,11 +166,11 @@
 \title{Scoping Review Protocol: Statistical Models for Longitudinal
 Data}
 \author{Ariel I. Mundo Ortiz}
-\date{2022-08-03}
+\date{2022-08-05}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, frame hidden, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -158,22 +181,43 @@ Data}
 \hypertarget{background}{%
 \section{Background}\label{background}}
 
-Longitudinal experiments are frequent in the health sciences (biomedical
-research, epidemiology, public health) as they are able to provide a
-time-resolved view of biological processes. However, there analysis of
-longitudinal data can be complex as study design, missing data, and are
-factors that need to be considered in order to use a statistical
-analysis that is congruent with the experimental design and the
-limitations from the data itself.
+Longitudinal studies are frequently used in the health sciences
+(biomedical research, epidemiology, public health, among others) as they
+allow to examine how the temporal effect of a treatment or intervention.
+Despite their benefits, longitudinal studies present challenges with
+regard to data missingness, increased financial costs, and the different
+statistical methodologies that can be used to analyze
+them\textsuperscript{1,2}.
+
+However, there analysis of longitudinal data can be complex as study
+design, missing data, and are factors that need to be considered in
+order to use a statistical analysis that is congruent with the
+experimental design and the limitations from the data itself.
+
+\hypertarget{field}{%
+\section{field}\label{field}}
+
+good number to start between 5-10k
+
+rationales for the methods used
+
+how many papers use each method, or improved method
+
+software, why people use what they use
+
+reasons for why people use the same methods
 
 \hypertarget{objective}{%
 \section{Objective}\label{objective}}
 
-This study aims to summarize the different statistical models used
-within the health sciences community to analyze longitudinal data, in
-order to understand the rationale for the choices used by the majority
-of researchers. In this way, the use of such models can be
-contextualized and the implications of such choices can be analyzed.
+This study aims to report the different statistical models used in the
+health sciences to analyze longitudinal data, in order to present
+anunderstand the rationale for the choices used by the majority of
+researchers. In this way, the use of such models can be contextualized
+and the implications of such choices can be analyzed.
+
+\emph{checking how many people check for model assumptions and how this
+impacts the results they report}
 
 \hypertarget{review-question}{%
 \section{Review Question}\label{review-question}}
@@ -190,6 +234,13 @@ contextualized and the implications of such choices can be analyzed.
 \hypertarget{inclusion-criteria}{%
 \subsection{Inclusion Criteria}\label{inclusion-criteria}}
 
+\begin{itemize}
+\item
+  methods paper see new methods developed
+\item
+  application
+\end{itemize}
+
 \hypertarget{exclusion-criteria}{%
 \subsection{Exclusion Criteria}\label{exclusion-criteria}}
 
@@ -204,6 +255,26 @@ contextualized and the implications of such choices can be analyzed.
 
 \hypertarget{data-synthesis-strategy}{%
 \subsection{Data Synthesis Strategy}\label{data-synthesis-strategy}}
+
+\hypertarget{references}{%
+\subsection{References}\label{references}}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-caruana2015}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Caruana EJ, Roman M, Hernández-Sánchez J, Solli P.
+Longitudinal studies. \emph{Journal of Thoracic Disease}.
+2015;7(11):E537-40.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mundo2022}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Mundo AI, Tipton JR, Muldoon TJ. Generalized additive
+models to analyze nonlinear trends in biomedical longitudinal data using
+r: Beyond repeated measures {ANOVA} and linear mixed models.
+\emph{Statistics in Medicine}. Published online July 2022.}
+
+\end{CSLReferences}
 
 
 
