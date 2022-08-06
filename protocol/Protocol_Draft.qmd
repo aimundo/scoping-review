@@ -16,10 +16,9 @@ format:
 
 ## Background
 
-Longitudinal studies are frequently used in the health sciences (biomedical research, epidemiology, public health, among others) as they allow to examine how the temporal effect of a treatment or intervention. Despite their benefits, longitudinal studies present challenges with regard to data missingness, increased financial costs, and the different statistical methodologies that can be used to analyze them [@caruana2015;@mundo2022].
+Longitudinal studies are frequently used in the health sciences (biomedical research, epidemiology, public health, among others) as they allow to examine how the temporal effect of a treatment or intervention. Despite their benefits, the inherent time dependency of longitudinal studies creates additional challenges with regard to data missingness, financial costs, and more importantly, the selection statistical methodologies that are appropriate to analyze the collected signal [@caruana2015;@mundo2022].
 
-
-However, there analysis of longitudinal data can be complex as study design, missing data, and are factors that need to be considered in order to use a statistical analysis that is congruent with the experimental design and the limitations from the data itself. 
+In this regard, statistical methods such as the repeated measures analysis of variance (rm-ANOVA) or linear mixed models (LMMs) have been historically preferred by researchers, but the assumptions required for their use are frequently not satisfied in longitudinal studies in the health sciences [@mundo2022]. Although 
 
 ## field
 

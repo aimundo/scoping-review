@@ -1,0 +1,62 @@
+---
+title: "Scoping Review Protocol: Statistical Models for Longitudinal Data"
+date: "`r Sys.Date()`"
+author: "Ariel I. Mundo Ortiz"
+affiliation: "Université de Montréal, Montreal, QC, Canada"
+format:
+  pdf:
+    keep-tex: true
+    documentclass: article
+    toc: true
+    number-sections: true
+    colorlinks: true
+    csl: references/american-medical-association.csl
+    bibliography: references/refs.bib
+---
+
+# Background
+
+Longitudinal studies are frequently used in the health sciences (biomedical research, epidemiology, public health, among others) as they allow to examine how the temporal effect of a treatment or intervention. Despite their benefits, the inherent time dependency of longitudinal studies creates additional challenges with regard to data missingness, financial costs, and more importantly, the selection statistical methodologies that are appropriate to analyze the collected signal [@caruana2015;@mundo2022a].
+
+Historically, the repeated measures analysis of variance (rm-ANOVA) has been the preferred method to analyze longitudinal data, despite the fact that frequently, the assumptions required for the application of this method are not satisfied by longitudinal data [@mundo2022a]. Modern statistical methods that overcome the limitations of rm-ANOVA have been developed, such as linear mixed models, generalized additive models, Bayesian models, and generalized estimating equations [@jiang2021;@hastie2017;@rosa2004;@ballinger2004]. During the last decade, these modern statistical methods have started to being adopted in the health sciences to analyze longitudinal data [@mundo2022b;@wang2014;@tian2020;@sevik2017], but so far, it is not know how widespread their use is, and what are the challenges that may limit their adoption by the broad health sciences field. 
+
+Surveying the statistical methods used to analyze longitudinal data in the health sciences can provide a better understanding of the extent in the adoption of modern statistical methods, and provide  rationale for situations where they are still not widely adopted. 
+
+#  Objective
+
+This study aims to summarize the different statistical models for longitudinal data that are used in the health sciences, identify the extent of the adoption of modern statistical methods in the field, and determine if in each case, model assumptions are checked by researchers to ensure congruency between the data and the model.
+
+
+# Review Question
+
+Summarize the statistical methods used to analyze longitudinal data in the health sciences to identify which methods are most commonly used, the applicability of such methods in the context of each study, and gaps that might exist that prevent the adoption of modern statistical methods that can be better suited to analyze the data. Additionally, identify if studies check for model assumptions, and how this in turn impacts the reported results.
+
+# Databases
+
+- PubMed
+- Web of Science
+
+# Search Terms
+
+# Criteria
+
+## Inclusion Criteria
+
+- methods paper see new methods developed 
+
+- application
+
+## Exclusion Criteria
+
+# Additional Resources
+
+# Comparison (?)
+
+# Data Extraction
+
+# Data Synthesis Strategy
+
+# References
+
+::: {#refs}
+:::
