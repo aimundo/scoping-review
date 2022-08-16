@@ -27,35 +27,16 @@ This additional layer of complexity has led to a problem of model misspecificati
 
 Historically, the repeated measures ANOVA (rm-ANOVA, a statistical model for longitudinal data) has been the preferred method in the health sciences to analyze longitudinal data, despite the fact that the multiple assumptions required by this model are frequently not satisfied by the data collected in longitudinal studies [@mundo2022a]. On the other hand, the last 30 years have seen incredible progress in the field of Statistics with the development of statistical models for longitudinal data that relax the assumptions of rm-ANOVA. Linear mixed models, generalized additive models, Bayesian models, and generalized estimating equations are among these modern statistical models developed for longitudinal data [@pinheiro2000;@jiang2021;@hastie2017;@rosa2004;@ballinger2004]. From these statistical methods, linear mixed models and generalized estimating equations are the two classes of models that have been frequently applied to analyze longitudinal data in the health sciences during the last decade [@wang2014;@tian2020;@sevik2017].
 
-However, modern statistical methods that are suited to analyze longitudinal data have been the exception rather than the norm in the health sciences. In 2001, a study reported that only 30% of the clinical trials analyzed used linear mixed models to analyze their results, and that the preferred method of analysis continued to be rm-ANOVA [@gueorguieva2004] (in comparison, McCullagh and Nelder's seminal book on the generalized linear model (GLM) was published in 1989 [@mccullagh2019], and there was ongoing work on the extension of the GLM framework to the mixed model case by 1993 [@breslow1993]). Apart from the aforementioned study, there are not recent papers that examine the use of modern statistical methods for longitudinal data in the health sciences. Such information is a critical to understand if the use of these methods has increased or decreased over the last 20 years, and the reasons behind such changes.
+However, modern statistical methods that are suited to analyze longitudinal data have been the exception rather than the norm in the health sciences. In 2001, a study reported that only 30% of the clinical trials analyzed used linear mixed models to analyze their results, and that the preferred method of analysis continued to be rm-ANOVA [@gueorguieva2004] (in comparison, McCullagh and Nelder's seminal book on the generalized linear model (GLM) was published in 1989 [@mccullagh2019], and there was ongoing work on the extension of the GLM framework to the mixed model case by 1993 [@breslow1993]). Apart from the aforementioned study, there are not recent papers that examine the use of modern statistical methods for longitudinal data in the health sciences. Such information is critical to understand if the use of these methods has increased or decreased in the field over the last 20 years, and the reasons behind such changes.
 
-Additionally, the reproducibility crisis continues in the health sciences [@jarvis2016;@turkiewicz2018].  thereby remaining an ongoing issue and because the use of appropriate statistical tools is a core component of research reproducibility [@gosselin2020;@lang2015], there is a need to better understand what are the statistical models used for longitudinal data in the health sciences today
+Additionally, the reproducibility crisis is an ongoing issue in the health sciences [@jarvis2016;@turkiewicz2018], a major component of it being the misuse and lack of reproducibility of statistical analyses [@gosselin2020;@lang2015]. Despite the fact that the landscape of statistical software has vastly increased in the last decade with many statistical computational tools (software, packages) now available to researchers, reproducibility standards vary between each computational tool [@gentleman2007]. Furthermore, there is still high variability in the amount of statistical reporting across journals [@indrayan2020]. Understanding what statistical computational tools are used nowadays by researchers in the health sciences can provide an assessment of the advances in the field towards research reproducibility, while identifying limitations that might still be in place.
 
+In this study, we surveyed the statistical methods used in papers dealing with longitudinal data in the health sciences in order to: 1) identify statistical methods used in order to assess the trends in adoption of modern statistical methods, 2) determine what are the computational tools used by researchers to perform statistical analyses, and 3) use the previous points to provide context to the current status of the advances in research reproducibility in the field.
 
-to identify the ongoing issues in the adoption of modern statistical models for longitudinal data.
-
-
-: 
-
-
-
-
-
-
-
-
-During the last decade, modern statistical models (such as generalized additive models, generalized estimating equations, and linear mixed models) have been gained popularity to analyze longitudinal data in the health sciences [@mundo2022b;@wang2014;@tian2020;@sevik2017]. Despite this, the current status in the adoption of these modern statistical methods by the field at large remains unknown. Because the use of appropriate statistical tools is a core component of research reproducibility [@gosselin2020;@lang2015], there is a need to better understand the current status of statistical practices for longitudinal data in the health sciences, and to identify the ongoing issues in the adoption of modern statistical models for longitudinal data.
-
-To answer these questions, in this study we surveyed the statistical methods used in papers dealing with longitudinal data in health sciences over the last 20 years, in order to gain a better understanding of: 1) the trends in adoption of modern statistical methods, 2) identify the most frequent pitfalls in the analsys of longitudinal data, and 3) provide a rationale for situations where these methods are still not widely adopted. 
 
 #  Objective
 
-This study aims to summarize the different statistical models for longitudinal data that are used in the health sciences, identify the extent of the adoption of modern statistical methods in the field, and determine if in each case, model assumptions are checked by researchers to ensure congruency between the data and the model.
-
-# For Discussion
-
-Such problem (model misspecification) can be partially explained by the fact that researchers have a tendency to use the same statistical analyses, methods, and tests from other papers without having a clear understanding of the limitations, assumptions, and applicability of the model in each situation [@ercan2007;@thiese2015].
-
+This study aims to summarize the different statistical models for longitudinal data that are used in the health sciences to identify the current extent in the adoption of modern statistical methods,  determine what are the computational tools used in each case and how this in turn affects the reproducibility, and provide an updated list on methods recently developed for longitudinal data in order to determine if they can be broadly applied to longitudinal data in the health sciences.  
 
 # Review Question
 
