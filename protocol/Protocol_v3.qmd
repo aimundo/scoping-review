@@ -49,6 +49,55 @@ Summarize the statistical methods used to analyze longitudinal data in the healt
 
 # Search Terms
 
+## For the Application of Modern Models on Longitudinal Biomedical/Health Data
+
+### PubMed
+
+#### Query 1:
+
+(biomedical OR health) AND ((repeated measures) OR (longitudinal study) OR (ANOVA) OR (mixed effects) OR (growth curve) OR (generalized additive model) OR (generalized estimating equation)) NOT ((review) OR (meta analysis))
+
+Hits: 393,188
+
+Comments: query picks too many papers, and is not specific
+
+#### Query 2:
+
+(biomedical OR health) AND ((repeated measures) OR (longitudinal study)) AND ((statistical analyses) OR (statistical analysis)) NOT ((review) OR (meta analysis))
+
+Hits: 12,617
+
+Comments: \textcolor{blue}{This is the best query so far}. 
+
+Papers from this query appear to be good. The query catches many papers from psychology and psychiatry, but the ones I checked did said used linear mixed models or regression in their analyses.
+
+### Web of Science
+
+#### Query 1:
+
+WC=(biom* OR health OR allergy OR cell biology OR cardio* OR hematology OR immunology OR life sciences biomedicine other topics OR medical informatics OR neuro* OR oncology OR   pharmacology OR radiology, nuclear medicine & medical imaging OR research & experimental medicine OR substance abuse OR optics) AND AK=(longitudinal study OR repeated measures study) NOT ALL=(review OR meta analysis) NOT AK=(model* AND study design) NOT KP=(model)
+
+Hits: 4,716
+
+Comments: \textcolor{blue}{This query seems to be good}.  
+
+Web of Science allows to specify more fields that result in a more targeted search. The last two parts of the query (AK and KP) removed studies method or tutorial papers from journals such as _Statistics in Medicine_.
+
+## For Methods on Longitudinal Data
+
+### Web of Science
+
+#### Query 1:
+
+AK=((longitudinal OR repeated measures OR longitudinal data) AND (model OR design))  NOT ALL=(review OR meta analysis)  NOT ALL=(survival analysis)
+
+Hits: 3,071
+
+Comments: \textcolor{blue}{This query seems to be good}.
+
+This query returns papers that deal with methods for longitudinal analysis. Two additional options can be selected: 1) include only articles (which reduces the number of hits to 2,936 as book chapters and editorials are omitted) and 2) select from the 01/01/2000 until today (which could be reasonable as the increment of models has occurred during the last two decades. This option reduces the number to papers to 2,849).  
+
+
 # Criteria
 
 ## Inclusion Criteria

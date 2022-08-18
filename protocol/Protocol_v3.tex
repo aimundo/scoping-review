@@ -171,11 +171,11 @@
 \title{Scoping Review Protocol: Statistical Models for Longitudinal
 Data}
 \author{Ariel I. Mundo Ortiz}
-\date{2022-08-16}
+\date{2022-08-18}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, frame hidden, interior hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, enhanced, breakable, boxrule=0pt, frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -302,6 +302,90 @@ reported results.
 
 \hypertarget{search-terms}{%
 \section{Search Terms}\label{search-terms}}
+
+\hypertarget{for-the-application-of-modern-models-on-longitudinal-biomedicalhealth-data}{%
+\subsection{For the Application of Modern Models on Longitudinal
+Biomedical/Health
+Data}\label{for-the-application-of-modern-models-on-longitudinal-biomedicalhealth-data}}
+
+\hypertarget{pubmed}{%
+\subsubsection{PubMed}\label{pubmed}}
+
+\hypertarget{query-1}{%
+\paragraph{Query 1:}\label{query-1}}
+
+(biomedical OR health) AND ((repeated measures) OR (longitudinal study)
+OR (ANOVA) OR (mixed effects) OR (growth curve) OR (generalized additive
+model) OR (generalized estimating equation)) NOT ((review) OR (meta
+analysis))
+
+Hits: 393,188
+
+Comments: query picks too many papers, and is not specific
+
+\hypertarget{query-2}{%
+\paragraph{Query 2:}\label{query-2}}
+
+(biomedical OR health) AND ((repeated measures) OR (longitudinal study))
+AND ((statistical analyses) OR (statistical analysis)) NOT ((review) OR
+(meta analysis))
+
+Hits: 12,617
+
+Comments: \textcolor{blue}{This is the best query so far}.
+
+Papers from this query appear to be good. The query catches many papers
+from psychology and psychiatry, but the ones I checked did said used
+linear mixed models or regression in their analyses.
+
+\hypertarget{web-of-science}{%
+\subsubsection{Web of Science}\label{web-of-science}}
+
+\hypertarget{query-1-1}{%
+\paragraph{Query 1:}\label{query-1-1}}
+
+WC=(biom* OR health OR allergy OR cell biology OR cardio* OR hematology
+OR immunology OR life sciences biomedicine other topics OR medical
+informatics OR neuro* OR oncology OR pharmacology OR radiology, nuclear
+medicine \& medical imaging OR research \& experimental medicine OR
+substance abuse OR optics) AND AK=(longitudinal study OR repeated
+measures study) NOT ALL=(review OR meta analysis) NOT AK=(model* AND
+study design) NOT KP=(model)
+
+Hits: 4,716
+
+Comments: \textcolor{blue}{This query seems to be good}.
+
+Web of Science allows to specify more fields that result in a more
+targeted search. The last two parts of the query (AK and KP) removed
+studies method or tutorial papers from journals such as \emph{Statistics
+in Medicine}.
+
+\hypertarget{for-methods-on-longitudinal-data}{%
+\subsection{For Methods on Longitudinal
+Data}\label{for-methods-on-longitudinal-data}}
+
+\hypertarget{web-of-science-1}{%
+\subsubsection{Web of Science}\label{web-of-science-1}}
+
+\hypertarget{query-1-2}{%
+\paragraph{Query 1:}\label{query-1-2}}
+
+AK=((longitudinal OR repeated measures OR longitudinal data) AND (model
+OR design)) NOT ALL=(review OR meta analysis) NOT ALL=(survival
+analysis)
+
+Hits: 3,071
+
+Comments: \textcolor{blue}{This query seems to be good}.
+
+This query returns papers that deal with methods for longitudinal
+analysis. Two additional options can be selected: 1) include only
+articles (which reduces the number of hits to 2,936 as book chapters and
+editorials are omitted) and 2) select from the 01/01/2000 until today
+(which could be reasonable as the increment of models has occurred
+during the last two decades. This option reduces the number to papers to
+2,849).
 
 \hypertarget{criteria}{%
 \section{Criteria}\label{criteria}}
