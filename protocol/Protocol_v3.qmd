@@ -98,19 +98,64 @@ Comments: \textcolor{blue}{This query seems to be good}.
 This query returns papers that deal with methods for longitudinal analysis. Two additional options can be selected: 1) include only articles (which reduces the number of hits to 2,936 as book chapters and editorials are omitted) and 2) select from the 01/01/2000 until today (which could be reasonable as the increment of models has occurred during the last two decades. This option reduces the number to papers to 2,849).  
 
 
-# Criteria
+# Criteria for Study Selection
 
-## Inclusion Criteria
+## For the Application of Modern Statistical Models on Longitudinal Biomedical/Health Data
 
-- methods paper see new methods developed 
+### Inclusion Criteria
 
-- application
+- Articles that:
 
-## Exclusion Criteria
+    - Belong to the biomedical/health sciences fields
+
+    - Describe the collection and analysis of longitudinal data at the preclinical or clinical level
+
+    - Indicate the statistical model used to analyze the data
+    
+    - Report the results of their statistical analyses
+    
+
+### Exclusion Criteria
+
+  - Cross-sectional studies
+
+  - Tutorials that present the application of existing statistical methods to biomedical/health data
+    
+  - Reviews, meta-analyses, or systematic reviews on existing statistical methods for longitudinal data
+    
+  - Studies that use only descriptive statistics to summarize/analyze the data
+    
+
+## For Methods on Longitudinal Data
+
+### Inclusion Criteria
+
+- Articles that:
+
+    - Present new methodologies or significant improvements to existing methods for longitudinal data
+    
+### Exclusion Criteria
+
+
+- Systematic reviews, meta-analyses, or reviews of statistical methods for longitudinal data
+
+
+- Tutorials that present the application of existing statistical methods to biomedical/health longitudinal data
+
 
 # Additional Resources
 
-# Comparison (?)
+# Comparison
+
+- Methods most commonly used by researchers to analyze longitudinal data
+
+- Software and packages used (R, SAS, SPSS, etc)
+
+- Increase or decrease in the adoption of modern statistical methods for longitudinal data in the last \approx 20 years (vs rm-ANOVA or non-parametric alternatives)
+
+- Appropriateness of methods used in each case with regard to missing data, non-linear trends, correlation
+
+- Articles that make clear statements about open science and that share resources (data, code, resoures sharing) 
 
 # Data Extraction
 
