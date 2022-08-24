@@ -1,5 +1,5 @@
 ---
-title: "Scoping Review Protocol: Statistical Models for Longitudinal Data"
+title: "Scoping Review Protocol: Statistical Models for Longitudinal Data in Health and Biomedical Research: Current State, Challenges, and Opportunities"
 date: "`r Sys.Date()`"
 author: "Ariel I. Mundo Ortiz"
 affiliation: "Université de Montréal, Montreal, QC, Canada"
@@ -85,6 +85,30 @@ Web of Science allows to specify more fields that result in a more targeted sear
 
 ## For Methods on Longitudinal Data
 
+### PubMed
+
+#### Query 1:
+
+( "Statistics as Topic/methods"[Mesh] OR "Statistics as Topic/statistics and numerical data"[Mesh] ) AND ("longitudinal data"[Title/Abstract] OR "longitudinal study"[Title/Abstract] OR "repeated measures"[Title/Abstract]) NOT(review[Title/Abstract] OR meta analy*)
+
+Hits: 791
+
+Comments: 
+
+This query produces mixed results, where application studies are retrieved along with studies that deal with models for longitudinal data (from journals like _Statistics in Medicine_ _Biometrics_). 
+
+#### Query 2:
+
+( "Longitudinal Studies/methods"[Mesh] OR "Longitudinal Studies/standards"[Mesh] OR "Longitudinal Studies/statistics and numerical data"[Mesh] ) NOT ("review" OR "meta analys*")
+
+Hits: 236
+
+Comments: 
+
+This query reduces drastically the number of results, but the papers seem to be more in line with methods for longitudinal data. One thing to note is because PubMed is a database focused on the health sciences, papers in it are from journals such as  _Statistics in Medicine_ and _Biometrics_, where application of models to health data are most commonly reported.
+
+\textcolor{blue}{I believe this is the best query so far}, but I would appreciate suggestions or comments, specially in this one.
+
 ### Web of Science
 
 #### Query 1:
@@ -155,9 +179,11 @@ This query returns papers that deal with methods for longitudinal analysis. Two 
 
 - Appropriateness of methods used in each case with regard to missing data, non-linear trends, correlation
 
-- Articles that make clear statements about open science and that share resources (data, code, resoures sharing) 
+- Articles that make clear statements about open science and that share resources (data, code, resources sharing) 
 
 # Data Extraction
+
+Two reviewers will independently analyze the database search results and pre-screen articles based on title and abstract content following the aforementioned inclusion/exclusion criteria. Manuscripts from the database(s) search will be stored in the Covidence platform, where duplicated entries will be removed. For articles where pre-screening inclusion (or exclusion) is unclear based on title and abstract analysis, full-text review will be used to make a decision following review by a third independent reviewer. Manuscripts included after title and abstract pre-screening will be further screening by two reviewers that will independently examine the full text of each article. 
 
 # Data Synthesis Strategy
 
