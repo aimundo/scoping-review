@@ -126,7 +126,9 @@ Again, papers that describe the development of new methods for longitudinal data
 
 #### Query 1:
 
-AK=((longitudinal OR repeated measures OR longitudinal data) AND (model OR design))  NOT ALL=(review OR meta analysis)  NOT ALL=(survival analysis)
+AK=((longitudinal OR repeated measures \BN{sout{OR longitudinal data, already included in longitudinal}}) AND (model
+OR design OR \BN{method})) \sout{NOT ALL=(review OR meta analysis) NOT ALL=(survival
+analysis)}
 
 Hits: 3,071
 
@@ -135,8 +137,22 @@ Comments: \textcolor{blue}{This query seems to be good}.
 This query returns papers that deal with methods for longitudinal analysis. Two additional options can be selected: 1) include only articles (which reduces the number of hits to 2,936 as book chapters and editorials are omitted) and 2) select from the 01/01/2000 until today (which could be reasonable as the increment of models has occurred during the last two decades. This option reduces the number to papers to 2,849).  
 
 
-#### Query 2:
+\BN{we will see when the queries is revised what is the best strategy}
 
+
+#### Query 2 (updated Query 1):
+
+I updated the query based on your comments. The query is more specific now, please see below.
+
+
+
+AK=((longitudinal OR repeated measures) AND (model OR design OR method)) NOT TI=(review OR meta analysis) NOT AK=(survival analysis) AND SU=(stat* OR MATH*) NOT AB=(tutorial)
+
+Hits: 1,978
+
+Comments: 
+
+This query looks for papers where the authors used the keywords longitudinal or repeated measures, and model, or design or method; excludes papers that have "review" or "meta analysis" in the title, excludes those that have keywords of "survival analysis", and searches papers where the main subject has been tagged as statistics or math. Finally, papers that have the word "tutorial" in the abstract are excluded as well.
 
 
 # Criteria for Study Selection

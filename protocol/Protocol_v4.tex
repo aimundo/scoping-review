@@ -182,7 +182,7 @@ Opportunities}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden, breakable, boxrule=0pt, interior hidden, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, interior hidden, breakable, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -318,17 +318,8 @@ Data}\label{for-the-application-of-modern-models-on-longitudinal-biomedicalhealt
 \hypertarget{pubmed}{%
 \subsubsection{PubMed}\label{pubmed}}
 
-\hypertarget{query-1}{%
-\paragraph{Query 1:}\label{query-1}}
-
-(biomedical OR health) AND ((repeated measures) OR (longitudinal study)
-OR (ANOVA) OR (mixed effects) OR (growth curve) OR (generalized additive
-model) OR (generalized estimating equation)) NOT ((review) OR (meta
-analysis))
-
-Hits: 393,188
-
-Comments: query picks too many papers, and is not specific
+Note: I removed the query I had with specific names of specific
+statistical models (as the results were too broad and non-specific).
 
 \hypertarget{query-2}{%
 \paragraph{Query 2:}\label{query-2}}
@@ -371,8 +362,8 @@ previous query.
 \hypertarget{web-of-science}{%
 \subsubsection{Web of Science}\label{web-of-science}}
 
-\hypertarget{query-1-1}{%
-\paragraph{Query 1:}\label{query-1-1}}
+\hypertarget{query-1}{%
+\paragraph{Query 1:}\label{query-1}}
 
 WC=(biom* OR health OR allergy OR cell biology OR cardio* OR hematology
 OR immunology OR life sciences biomedicine other topics OR medical
@@ -397,37 +388,42 @@ OR immunology OR life sciences biomedicine other topics OR medical
 informatics OR neuro* OR oncology OR pharmacology OR radiology, nuclear
 medicine \& medical imaging OR research \& experimental medicine OR
 substance abuse OR optics) AND AK=(longitudinal study OR repeated
-measures study) NOT AK=(model* AND study design) NOT KP=(model)
+measures study) NOT AK=(model* AND study design) NOT KP=(model) NOT
+TI=(review OR meta analy*)
 
 Comments: \textcolor{blue}{Updated this query based on your comments}.
 
-Hits: 4,612
+Hits: 4,595
 
-Web of Science allows to specify more fields that result in a more
-targeted search. I ran the search above and selected ``Article'' from
-the ``Document Type'' Menu. This ensures that no reviews or meta
--analysis are included in the results.
+I updated this query based on your comments. Now I used NOT but focused
+on the title (hence, TI) so articles with ``review'' or ``meta
+analysis'' are excluded. An additional filter is that Web of Science
+allows to select the type of publications so I chose ``Article'', and
+this would remove review papers, editorials or other materials that are
+not research papers.
 
 \hypertarget{for-methods-on-longitudinal-data}{%
 \subsection{For Methods on Longitudinal
 Data}\label{for-methods-on-longitudinal-data}}
+
+\BN{you need to describe this part in your objectives}
 
 \textbf{I re-wrote the query here based on your comments.} After reading
 your comments and the queries I created, I realized that the filtering
 was not correct. I wrote a new query that I believe better represents
 the terms we want to look at.
 
-\hypertarget{query-1-2}{%
-\paragraph{Query 1:}\label{query-1-2}}
+\hypertarget{query-1-1}{%
+\paragraph{Query 1:}\label{query-1-1}}
 
 (``Models, Statistical'' {[}Mesh{]} OR
 ``Biostatistics/methods''{[}Mesh{]}) AND (``Longitudinal
 Studies''{[}Mesh{]}) NOT (Review{[}Publication Type{]} OR Meta
-Analys\emph{{[}Publication Type{]} OR ``editorial''{[}Publication
-Type{]}) NOT (``survival''{[}Title/abstract{]}) NOT
+Analys*{[}Publication Type{]} OR ``editorial''{[}Publication Type{]})
+NOT (``survival''{[}Title/abstract{]}) NOT
 (``tutorial''{[}title/abstract{]} OR
 ``orientation''{[}title/abstract{]}) NOT (Humans{[}Mesh{]} OR Adolescent
-{[}Mesh{]} OR Animal}{[}Mesh{]})
+{[}Mesh{]} OR Animals{[}Mesh{]})
 
 Hits: 142
 
@@ -453,12 +449,14 @@ and all of them seem to be about models, which is what we want.
 \hypertarget{web-of-science-1}{%
 \subsubsection{Web of Science}\label{web-of-science-1}}
 
-\hypertarget{query-1-3}{%
-\paragraph{Query 1:}\label{query-1-3}}
+\hypertarget{query-1-2}{%
+\paragraph{Query 1:}\label{query-1-2}}
 
-AK=((longitudinal OR repeated measures OR longitudinal data) AND (model
-OR design)) NOT ALL=(review OR meta analysis) NOT ALL=(survival
-analysis)
+AK=((longitudinal OR repeated measures
+\BN{sout{OR longitudinal data, already included in longitudinal}}) AND
+(model OR design OR \BN{method}))
+\sout{NOT ALL=(review OR meta analysis) NOT ALL=(survival
+analysis)}
 
 Hits: 3,071
 
@@ -471,6 +469,30 @@ editorials are omitted) and 2) select from the 01/01/2000 until today
 (which could be reasonable as the increment of models has occurred
 during the last two decades. This option reduces the number to papers to
 2,849).
+
+\BN{we will see when the queries is revised what is the best strategy}
+
+\hypertarget{query-2-updated-query-1-1}{%
+\paragraph{Query 2 (updated Query 1):}\label{query-2-updated-query-1-1}}
+
+I updated the query based on your comments. The query is more specific
+now, please see below.
+
+AK=((longitudinal OR repeated measures) AND (model OR design OR method))
+NOT TI=(review OR meta analysis) NOT AK=(survival analysis) AND
+SU=(stat* OR MATH*) NOT AB=(tutorial)
+
+Hits: 1,978
+
+Comments:
+
+This query looks for papers where the authors used the keywords
+longitudinal or repeated measures, and model, or design or method;
+excludes papers that have ``review'' or ``meta analysis'' in the title,
+excludes those that have keywords of ``survival analysis'', and searches
+papers where the main subject has been tagged as statistics or math.
+Finally, papers that have the word ``tutorial'' in the abstract are
+excluded as well.
 
 \hypertarget{criteria-for-study-selection}{%
 \section{Criteria for Study
