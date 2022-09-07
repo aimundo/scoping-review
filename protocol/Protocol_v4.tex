@@ -178,11 +178,11 @@
 in Health and Biomedical Research: Current State, Challenges, and
 Opportunities}
 \author{Ariel I. Mundo Ortiz}
-\date{2022-08-30}
+\date{2022-09-07}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, interior hidden, breakable, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, frame hidden, interior hidden, enhanced, breakable, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -190,8 +190,50 @@ Opportunities}
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
-\hypertarget{background}{%
-\section{Background}\label{background}}
+\hypertarget{notes}{%
+\section{Notes}\label{notes}}
+
+\textbf{As of Sept 7, 2022 this document follows the structure
+recommended by PRISMA-P}
+https://prisma-statement.org/documents/PRISMA-P-checklist.pdf
+
+\hypertarget{registration}{%
+\section{Registration}\label{registration}}
+
+This section will be populated with the registration number and registry
+name once the protocol is submitted for peer review.
+
+\hypertarget{author-contributions}{%
+\section{Author Contributions}\label{author-contributions}}
+
+\begin{itemize}
+\tightlist
+\item
+  AM: Writing, query design, data extraction and analysis . . .
+\end{itemize}
+
+Other authors to add later
+
+\hypertarget{amendements}{%
+\section{Amendements}\label{amendements}}
+
+Protocol amendments resulting from peer review will be indicated in this
+section indicating the date of each amendment.
+
+\hypertarget{support}{%
+\section{Support}\label{support}}
+
+This section will indicate the sources of financial or other support for
+the review
+
+\hypertarget{sources}{%
+\subsection{Sources}\label{sources}}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+\hypertarget{rationale}{%
+\subsection{Rationale}\label{rationale}}
 
 Longitudinal studies are frequently used in the health sciences
 (biomedical research, epidemiology, public health, among others) as they
@@ -228,9 +270,9 @@ by the data collected in longitudinal studies\textsuperscript{4}. On the
 other hand, the last 30 years have seen incredible progress in the field
 of Statistics with the development of statistical models for
 longitudinal data that relax the assumptions of rm-ANOVA. Linear mixed
-models, generalized additive models, Bayesian models, and generalized
-estimating equations are among these modern statistical models developed
-for longitudinal data\textsuperscript{7--11}. From these statistical
+models, generalized additive mixed models, and generalized estimating
+equations are among these modern statistical models developed for
+longitudinal data\textsuperscript{7--11}. From these statistical
 methods, linear mixed models and generalized estimating equations are
 the two classes of models that have been frequently applied to analyze
 longitudinal data in the health sciences during the last
@@ -256,8 +298,8 @@ health sciences\textsuperscript{18,19}, a major component of it being
 the misuse and lack of reproducibility of statistical
 analyses\textsuperscript{20,21}. Despite the fact that the landscape of
 statistical software has vastly increased in the last decade with many
-statistical computational tools (software, packages) now available to
-researchers, reproducibility standards vary between each computational
+statistical computational tools now available to researchers,
+reproducibility standards vary between each computational
 tool\textsuperscript{22}. Furthermore, there is still high variability
 in the amount of statistical reporting across
 journals\textsuperscript{23}. Understanding what statistical
@@ -266,63 +308,156 @@ sciences can provide an assessment of the advances in the field towards
 research reproducibility, while identifying limitations that might still
 be in place.
 
-In this study, we surveyed the statistical methods used in papers
-dealing with longitudinal data in the health sciences in order to: 1)
-identify statistical methods used in order to assess the trends in
-adoption of modern statistical methods, 2) determine what are the
-computational tools used by researchers to perform statistical analyses,
-and 3) use the previous points to provide context to the current status
-of the advances in research reproducibility in the field.
+\hypertarget{objectives}{%
+\section{Objectives}\label{objectives}}
 
-\hypertarget{objective}{%
-\section{Objective}\label{objective}}
+This study aims to:
 
-This study aims to summarize the different statistical models for
-longitudinal data that are used in the health sciences to identify the
-current extent in the adoption of modern statistical methods, determine
-what are the computational tools used in each case and how this in turn
-affects the reproducibility, and provide an updated list on methods
-recently developed for longitudinal data in order to determine if they
-can be broadly applied to longitudinal data in the health sciences.
+\begin{itemize}
+\item
+  Identify the different statistical models for longitudinal data that
+  are used in the health sciences in order to measure the current extent
+  in the adoption of modern statistical methods by the field (Aim 1a)
+\item
+  Summarize the computational tools used by researchers in the health
+  sciences to statistically analyze longitudinal data to understand the
+  current status of the field with regards to reproducibility. (Aim 1b)
+\item
+  List statistical methods for longitudinal data developed within the
+  last decade in order to showcase newer methods that may be applicable
+  for longitudinal data in a biomedical/health context. (Aim 2)
+\end{itemize}
 
 \hypertarget{review-question}{%
 \section{Review Question}\label{review-question}}
 
-Summarize the statistical methods used to analyze longitudinal data in
-the health sciences to identify which methods are most commonly used,
-the applicability of such methods in the context of each study, and gaps
-that might exist that prevent the adoption of modern statistical methods
-that can be better suited to analyze the data. Additionally, identify if
-studies check for model assumptions, and how this in turn impacts the
-reported results.
-
-\hypertarget{databases}{%
-\section{Databases}\label{databases}}
-
 \begin{itemize}
-\tightlist
 \item
-  PubMed
+  What are the statistical methods used in biomedical/health sciences
+  research?
 \item
-  Web of Science
+  Has the use of modern statistical methods increased in the field
+  during the last 20 years?
+\item
+  What computational tools are most commonly used by researchers to
+  analyze longitudinal data, and how in turn this affects
+  reproducibility?
+\item
+  What are most recent statistical methods developed for longitudinal
+  data, and how can they be applied in the health sciences?
 \end{itemize}
 
-\hypertarget{search-terms}{%
-\section{Search Terms}\label{search-terms}}
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+\hypertarget{types-of-studies}{%
+\subsection{Types of Studies}\label{types-of-studies}}
+
+For all the study aims, studies included in the analysis correspond to
+peer-reviewed publications in English.
+
+\hypertarget{eligibility-criteria}{%
+\subsection{Eligibility Criteria}\label{eligibility-criteria}}
+
+\hypertarget{for-the-application-of-modern-statistical-models-on-longitudinal-biomedicalhealth-data-aims-1a-and-1b}{%
+\subsubsection{For the Application of Modern Statistical Models on
+Longitudinal Biomedical/Health Data (Aims 1a and
+1b)}\label{for-the-application-of-modern-statistical-models-on-longitudinal-biomedicalhealth-data-aims-1a-and-1b}}
+
+\hypertarget{inclusion-criteria}{%
+\paragraph{Inclusion Criteria}\label{inclusion-criteria}}
+
+\begin{itemize}
+\item
+  Articles that:
+
+  \begin{itemize}
+  \item
+    Are written in English
+  \item
+    Belong to the biomedical/health sciences fields
+  \item
+    Describe the collection and analysis of continous or discrete
+    longitudinal data
+  \item
+    Indicate the statistical model used to analyze the data
+  \item
+    Report the results of their statistical analyses
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{exclusion-criteria}{%
+\paragraph{Exclusion Criteria}\label{exclusion-criteria}}
+
+\begin{itemize}
+\item
+  Cross-sectional studies
+\item
+  Tutorials that present the application of existing statistical methods
+  to biomedical/health data
+\item
+  Reviews, meta-analyses, or systematic reviews on existing statistical
+  methods for longitudinal data
+\item
+  Studies that use only descriptive statistics to summarize/analyze the
+  data
+\item
+  Studies that collect and analyze categorical data
+\end{itemize}
+
+\hypertarget{for-methods-on-longitudinal-data-aim-2}{%
+\subsubsection{For Methods on Longitudinal Data (Aim
+2)}\label{for-methods-on-longitudinal-data-aim-2}}
+
+\hypertarget{inclusion-criteria-1}{%
+\paragraph{Inclusion Criteria}\label{inclusion-criteria-1}}
+
+\begin{itemize}
+\item
+  Articles that:
+
+  \begin{itemize}
+  \item
+    Are written in English
+  \item
+    Present new methodologies or significant improvements to existing
+    methods for longitudinal data
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{exclusion-criteria-1}{%
+\paragraph{Exclusion Criteria}\label{exclusion-criteria-1}}
+
+\begin{itemize}
+\item
+  Systematic reviews, meta-analyses, or reviews of statistical methods
+  for longitudinal data
+\item
+  Tutorials that present the application of existing statistical methods
+  to biomedical/health longitudinal data
+\end{itemize}
+
+\hypertarget{information-sources}{%
+\subsection{Information Sources}\label{information-sources}}
+
+Studies will be retrieved from PubMed and Web of Science.
+
+\hypertarget{search-strategy}{%
+\subsection{Search Strategy}\label{search-strategy}}
 
 \hypertarget{for-the-application-of-modern-models-on-longitudinal-biomedicalhealth-data}{%
-\subsection{For the Application of Modern Models on Longitudinal
+\subsubsection{For the Application of Modern Models on Longitudinal
 Biomedical/Health
 Data}\label{for-the-application-of-modern-models-on-longitudinal-biomedicalhealth-data}}
 
 \hypertarget{pubmed}{%
-\subsubsection{PubMed}\label{pubmed}}
+\paragraph{PubMed}\label{pubmed}}
 
 Note: I removed the query I had with specific names of specific
 statistical models (as the results were too broad and non-specific).
 
 \hypertarget{query-2}{%
-\paragraph{Query 2:}\label{query-2}}
+\subparagraph{Query 2:}\label{query-2}}
 
 (biomedical OR health) AND ((repeated measures) OR (longitudinal study)
 \BN{OR longitudinal data}) AND ((statistical analyses) OR (statistical
@@ -339,7 +474,8 @@ Statistical methodologies (not about application of methods to
 longitudinal data):
 
 \hypertarget{query-3-modified-query-2}{%
-\paragraph{Query 3 (modified Query 2):}\label{query-3-modified-query-2}}
+\subparagraph{Query 3 (modified Query
+2):}\label{query-3-modified-query-2}}
 
 biomedical OR health) AND ((repeated measures) OR (longitudinal study)
 OR longitudinal data) AND ((statistical analyses) OR (statistical
@@ -360,10 +496,10 @@ deal with methodologies, but seems to be much more less than in the
 previous query.
 
 \hypertarget{web-of-science}{%
-\subsubsection{Web of Science}\label{web-of-science}}
+\paragraph{Web of Science}\label{web-of-science}}
 
 \hypertarget{query-1}{%
-\paragraph{Query 1:}\label{query-1}}
+\subparagraph{Query 1:}\label{query-1}}
 
 WC=(biom* OR health OR allergy OR cell biology OR cardio* OR hematology
 OR immunology OR life sciences biomedicine other topics OR medical
@@ -403,7 +539,7 @@ this would remove review papers, editorials or other materials that are
 not research papers.
 
 \hypertarget{for-methods-on-longitudinal-data}{%
-\subsection{For Methods on Longitudinal
+\subsubsection{For Methods on Longitudinal
 Data}\label{for-methods-on-longitudinal-data}}
 
 \BN{you need to describe this part in your objectives}
@@ -414,7 +550,7 @@ was not correct. I wrote a new query that I believe better represents
 the terms we want to look at.
 
 \hypertarget{query-1-1}{%
-\paragraph{Query 1:}\label{query-1-1}}
+\subparagraph{Query 1:}\label{query-1-1}}
 
 (``Models, Statistical'' {[}Mesh{]} OR
 ``Biostatistics/methods''{[}Mesh{]}) AND (``Longitudinal
@@ -447,10 +583,10 @@ deal with application, and that is why to me the result of the query
 and all of them seem to be about models, which is what we want.
 
 \hypertarget{web-of-science-1}{%
-\subsubsection{Web of Science}\label{web-of-science-1}}
+\paragraph{Web of Science}\label{web-of-science-1}}
 
 \hypertarget{query-1-2}{%
-\paragraph{Query 1:}\label{query-1-2}}
+\subparagraph{Query 1:}\label{query-1-2}}
 
 AK=((longitudinal OR repeated measures
 \BN{sout{OR longitudinal data, already included in longitudinal}}) AND
@@ -473,7 +609,8 @@ during the last two decades. This option reduces the number to papers to
 \BN{we will see when the queries is revised what is the best strategy}
 
 \hypertarget{query-2-updated-query-1-1}{%
-\paragraph{Query 2 (updated Query 1):}\label{query-2-updated-query-1-1}}
+\subparagraph{Query 2 (updated Query
+1):}\label{query-2-updated-query-1-1}}
 
 I updated the query based on your comments. The query is more specific
 now, please see below.
@@ -494,108 +631,13 @@ papers where the main subject has been tagged as statistics or math.
 Finally, papers that have the word ``tutorial'' in the abstract are
 excluded as well.
 
-\hypertarget{criteria-for-study-selection}{%
-\section{Criteria for Study
-Selection}\label{criteria-for-study-selection}}
+\hypertarget{data-collection-and-analysis}{%
+\subsection{Data Collection and
+Analysis}\label{data-collection-and-analysis}}
 
-\hypertarget{for-the-application-of-modern-statistical-models-on-longitudinal-biomedicalhealth-data}{%
-\subsection{For the Application of Modern Statistical Models on
-Longitudinal Biomedical/Health
-Data}\label{for-the-application-of-modern-statistical-models-on-longitudinal-biomedicalhealth-data}}
-
-\hypertarget{inclusion-criteria}{%
-\subsubsection{Inclusion Criteria}\label{inclusion-criteria}}
-
-\begin{itemize}
-\item
-  Articles that:
-
-  \begin{itemize}
-  \item
-    Belong to the biomedical/health sciences fields
-  \item
-    Describe the collection and analysis of longitudinal data at the
-    preclinical or clinical level
-  \item
-    Indicate the statistical model used to analyze the data
-  \item
-    Report the results of their statistical analyses
-  \end{itemize}
-\end{itemize}
-
-\hypertarget{exclusion-criteria}{%
-\subsubsection{Exclusion Criteria}\label{exclusion-criteria}}
-
-\begin{itemize}
-\item
-  Cross-sectional studies
-\item
-  Tutorials that present the application of existing statistical methods
-  to biomedical/health data
-\item
-  Reviews, meta-analyses, or systematic reviews on existing statistical
-  methods for longitudinal data
-\item
-  Studies that use only descriptive statistics to summarize/analyze the
-  data
-\end{itemize}
-
-\hypertarget{for-methods-on-longitudinal-data-1}{%
-\subsection{For Methods on Longitudinal
-Data}\label{for-methods-on-longitudinal-data-1}}
-
-\hypertarget{inclusion-criteria-1}{%
-\subsubsection{Inclusion Criteria}\label{inclusion-criteria-1}}
-
-\begin{itemize}
-\item
-  Articles that:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Present new methodologies or significant improvements to existing
-    methods for longitudinal data
-  \end{itemize}
-\end{itemize}
-
-\hypertarget{exclusion-criteria-1}{%
-\subsubsection{Exclusion Criteria}\label{exclusion-criteria-1}}
-
-\begin{itemize}
-\item
-  Systematic reviews, meta-analyses, or reviews of statistical methods
-  for longitudinal data
-\item
-  Tutorials that present the application of existing statistical methods
-  to biomedical/health longitudinal data
-\end{itemize}
-
-\hypertarget{additional-resources}{%
-\section{Additional Resources}\label{additional-resources}}
-
-\hypertarget{comparison}{%
-\section{Comparison}\label{comparison}}
-
-\begin{itemize}
-\item
-  Methods most commonly used by researchers to analyze longitudinal data
-\item
-  Software and packages used (R, SAS, SPSS, etc)
-\item
-  Increase or decrease in the adoption of modern statistical methods for
-  longitudinal data in the last \approx 20 years (vs rm-ANOVA or
-  non-parametric alternatives)
-\item
-  Appropriateness of methods used in each case with regard to missing
-  data, non-linear trends, correlation
-\item
-  Articles that make clear statements about open science and that share
-  resources (data, code, resources sharing)
-\end{itemize}
-
-\hypertarget{data-extraction}{%
-\section{Data Extraction}\label{data-extraction}}
+\hypertarget{selection-process-and-data-management}{%
+\subsubsection{Selection Process and Data
+Management}\label{selection-process-and-data-management}}
 
 Two reviewers will independently analyze the database search results and
 pre-screen articles based on title and abstract content following the
@@ -608,8 +650,74 @@ review by a third independent reviewer. Manuscripts included after title
 and abstract pre-screening will be further screening by two reviewers
 that will independently examine the full text of each article.
 
-\hypertarget{data-synthesis-strategy}{%
-\section{Data Synthesis Strategy}\label{data-synthesis-strategy}}
+\hypertarget{data-collection-process}{%
+\subsubsection{Data Collection Process}\label{data-collection-process}}
+
+Pilot forms (electronic spreadsheets) will be tested using a
+representative sample of the studies to be reviewed (\textasciitilde100
+studies). Information in the forms will be independently included by
+each reviewer. The forms will be updated (if needed), after the pilot
+test by consensus between the reviewers.
+
+Information obtained from each study (statistical method used, software,
+etc.) will be tabulated independently by the reviewers in an electronic
+spreadsheet.
+
+\hypertarget{data-items}{%
+\subsection{Data Items}\label{data-items}}
+
+Aims 1a and 1b:
+
+\begin{itemize}
+\item
+  Statistical method used
+\item
+  Sub-area of application (oncology, psychology, public health, etc)
+\item
+  Computational tool used
+\item
+  Congruence between statistical method used and the data
+\item
+  Year of publication
+\end{itemize}
+
+Aim 2:
+
+\begin{itemize}
+\item
+  Statistical method reported
+\item
+  Assumptions of the model
+\item
+  Computational tools available for its implementation
+\item
+  Year of publication
+\end{itemize}
+
+\hypertarget{risk-of-bias-in-individual-studies}{%
+\subsection{Risk of Bias in Individual
+Studies}\label{risk-of-bias-in-individual-studies}}
+
+N/A
+
+\hypertarget{data-synthesis}{%
+\subsection{Data Synthesis}\label{data-synthesis}}
+
+The data from the results of each included study will be extracted into
+electronic spreadsheets. Summary measures for Aims 1a and 1b include
+plots (pie, bar, etc) to show the relative use of each statistical
+method reported, computational tool, and congruence between statistical
+method and the data. Each plot will be segmented by year to show trends
+over time.
+
+For Aim 2, a table will be created where statistical method, year of
+publication, assumptions of the model, and applicability to health data
+is reported.
+
+\hypertarget{meta-biases}{%
+\subsection{Meta-Biases}\label{meta-biases}}
+
+N/A
 
 \hypertarget{references}{%
 \section{References}\label{references}}

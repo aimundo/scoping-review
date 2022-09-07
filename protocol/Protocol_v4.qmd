@@ -19,43 +19,142 @@ format:
     bibliography: references/refs.bib
 ---
 
-# Background
+# Notes
+
+**As of Sept 7, 2022 this document follows the structure recommended by PRISMA-P**
+https://prisma-statement.org/documents/PRISMA-P-checklist.pdf
+
+# Registration
+
+This section will be populated with the registration number and registry name once the protocol is submitted for peer review.
+
+# Author Contributions
+
+- AM: Writing, query design, data extraction and analysis
+.
+.
+.
+
+Other authors to add later
+
+# Amendements
+
+Protocol amendments resulting from peer review will be indicated in this section indicating the date of each amendment.
+
+# Support
+
+This section will indicate the sources of financial or other support for the review
+
+## Sources
+
+# Introduction
+
+## Rationale
 
 Longitudinal studies are frequently used in the health sciences (biomedical research, epidemiology, public health, among others) as they allow to examine how the temporal effect of a treatment or an intervention, in contrast to a cross-sectional study, which only allows to examine the effect of the intervention at a single time point.  When compared their cross-sectional counterparts, longitudinal studies allow for increased statistical power and more cost efficient strategies [@edwards2000;@zeger1992]. However, the statistical analysis of longitudinal data requires to take into consideration factors such as data missingness, correlation, and non-linear trends, which do not occur on cross-sectional data [@caruana2015;@mundo2022a]. In other words, there is an "analytic cost" associated with the increased complexity of longitudinal data [@zeger1992].
 
 This additional layer of complexity has led to a problem of model misspecification in the statistical analysis of the data (i.e., the use of a statistical model that is not coherent with the data), which has been reported to occur in many fields, including the health sciences [@thiese2015]. For example, in a landmark study Liu et al. showed that in a subset of papers in the biomedical sciences, the most popular model used to analyze longitudinal data was the analysis of variance (ANOVA, an approach that fails to take into account the correlation between measures over time), and that only 18% of the studies analyzed used models intended for longitudinal analysis while checking that the assumptions of the model were satisfied by the data [@liu2010]. 
 
-Historically, the repeated measures ANOVA (rm-ANOVA, a statistical model for longitudinal data) has been the preferred method in the health sciences to analyze longitudinal data, despite the fact that the multiple assumptions required by this model are frequently not satisfied by the data collected in longitudinal studies [@mundo2022a]. On the other hand, the last 30 years have seen incredible progress in the field of Statistics with the development of statistical models for longitudinal data that relax the assumptions of rm-ANOVA. Linear mixed models, generalized additive models, Bayesian models, and generalized estimating equations are among these modern statistical models developed for longitudinal data [@pinheiro2000;@jiang2021;@hastie2017;@rosa2004;@ballinger2004]. From these statistical methods, linear mixed models and generalized estimating equations are the two classes of models that have been frequently applied to analyze longitudinal data in the health sciences during the last decade [@wang2014;@tian2020;@sevik2017].
+Historically, the repeated measures ANOVA (rm-ANOVA, a statistical model for longitudinal data) has been the preferred method in the health sciences to analyze longitudinal data, despite the fact that the multiple assumptions required by this model are frequently not satisfied by the data collected in longitudinal studies [@mundo2022a]. On the other hand, the last 30 years have seen incredible progress in the field of Statistics with the development of statistical models for longitudinal data that relax the assumptions of rm-ANOVA. Linear mixed models, generalized additive mixed models, and generalized estimating equations are among these modern statistical models developed for longitudinal data [@pinheiro2000;@jiang2021;@hastie2017;@rosa2004;@ballinger2004]. From these statistical methods, linear mixed models and generalized estimating equations are the two classes of models that have been frequently applied to analyze longitudinal data in the health sciences during the last decade [@wang2014;@tian2020;@sevik2017].
 
 However, modern statistical methods that are suited to analyze longitudinal data have been the exception rather than the norm in the health sciences. In 2001, a study reported that only 30% of the clinical trials analyzed used linear mixed models to analyze their results, and that the preferred method of analysis continued to be rm-ANOVA [@gueorguieva2004] (in comparison, McCullagh and Nelder's seminal book on the generalized linear model (GLM) was published in 1989 [@mccullagh2019], and there was ongoing work on the extension of the GLM framework to the mixed model case by 1993 [@breslow1993]). Apart from the aforementioned study, there are not recent papers that examine the use of modern statistical methods for longitudinal data in the health sciences. Such information is critical to understand if the use of these methods has increased or decreased in the field over the last 20 years, and the reasons behind such changes.
 
-Additionally, the reproducibility crisis is an ongoing issue in the health sciences [@jarvis2016;@turkiewicz2018], a major component of it being the misuse and lack of reproducibility of statistical analyses [@gosselin2020;@lang2015]. Despite the fact that the landscape of statistical software has vastly increased in the last decade with many statistical computational tools (software, packages) now available to researchers, reproducibility standards vary between each computational tool [@gentleman2007]. Furthermore, there is still high variability in the amount of statistical reporting across journals [@indrayan2020]. Understanding what statistical computational tools are used nowadays by researchers in the health sciences can provide an assessment of the advances in the field towards research reproducibility, while identifying limitations that might still be in place.
+Additionally, the reproducibility crisis is an ongoing issue in the health sciences [@jarvis2016;@turkiewicz2018], a major component of it being the misuse and lack of reproducibility of statistical analyses [@gosselin2020;@lang2015]. Despite the fact that the landscape of statistical software has vastly increased in the last decade with many statistical computational tools now available to researchers, reproducibility standards vary between each computational tool [@gentleman2007]. Furthermore, there is still high variability in the amount of statistical reporting across journals [@indrayan2020]. Understanding what statistical computational tools are used nowadays by researchers in the health sciences can provide an assessment of the advances in the field towards research reproducibility, while identifying limitations that might still be in place.
 
-In this study, we surveyed the statistical methods used in papers dealing with longitudinal data in the health sciences in order to: 1) identify statistical methods used in order to assess the trends in adoption of modern statistical methods, 2) determine what are the computational tools used by researchers to perform statistical analyses, and 3) use the previous points to provide context to the current status of the advances in research reproducibility in the field.
+#  Objectives
+
+This study aims to:
+
+- Identify the different statistical models for longitudinal data that are used in the health sciences in order to measure the current extent in the adoption of modern statistical methods by the field (Aim 1a)
+
+- Summarize the computational tools used by researchers in the health sciences to statistically analyze longitudinal data to understand the current status of the field with regards to reproducibility. (Aim 1b)
+
+- List statistical methods for longitudinal data developed within the last decade in order to showcase newer methods that may be applicable for longitudinal data in a biomedical/health context. (Aim 2)
 
 
-#  Objective
-
-This study aims to summarize the different statistical models for longitudinal data that are used in the health sciences to identify the current extent in the adoption of modern statistical methods,  determine what are the computational tools used in each case and how this in turn affects the reproducibility, and provide an updated list on methods recently developed for longitudinal data in order to determine if they can be broadly applied to longitudinal data in the health sciences.  
 
 # Review Question
 
-Summarize the statistical methods used to analyze longitudinal data in the health sciences to identify which methods are most commonly used, the applicability of such methods in the context of each study, and gaps that might exist that prevent the adoption of modern statistical methods that can be better suited to analyze the data. Additionally, identify if studies check for model assumptions, and how this in turn impacts the reported results.
+- What are the statistical methods used in biomedical/health sciences research? 
 
-# Databases
+- Has the use of modern statistical methods increased in the field during the last 20 years?
 
-- PubMed
-- Web of Science
+- What computational tools are most commonly used by researchers to analyze longitudinal data, and how in turn this affects reproducibility?
 
-# Search Terms
+- What are most recent statistical methods developed for longitudinal data, and how can they be applied in the health sciences?
 
-## For the Application of Modern Models on Longitudinal Biomedical/Health Data
+# Methods
 
-### PubMed
+## Types of Studies
+
+For all the study aims, studies included in the analysis correspond to peer-reviewed publications in English.
+
+## Eligibility Criteria
+
+### For the Application of Modern Statistical Models on Longitudinal Biomedical/Health Data (Aims 1a and 1b)
+
+#### Inclusion Criteria
+
+- Articles that:
+    
+    - Are written in English 
+
+    - Belong to the biomedical/health sciences fields
+
+    - Describe the collection and analysis of continous or discrete longitudinal data 
+
+    - Indicate the statistical model used to analyze the data
+    
+    - Report the results of their statistical analyses
+    
+
+#### Exclusion Criteria
+
+  - Cross-sectional studies
+
+  - Tutorials that present the application of existing statistical methods to biomedical/health data
+    
+  - Reviews, meta-analyses, or systematic reviews on existing statistical methods for longitudinal data
+    
+  - Studies that use only descriptive statistics to summarize/analyze the data
+  
+  - Studies that collect and analyze categorical data
+    
+
+### For Methods on Longitudinal Data (Aim 2)
+
+#### Inclusion Criteria
+
+- Articles that:
+    
+    - Are written in English
+
+    - Present new methodologies or significant improvements to existing methods for longitudinal data
+    
+#### Exclusion Criteria
+
+
+- Systematic reviews, meta-analyses, or reviews of statistical methods for longitudinal data
+
+
+- Tutorials that present the application of existing statistical methods to biomedical/health longitudinal data
+
+
+
+
+## Information Sources
+
+Studies will be retrieved from PubMed and  Web of Science.
+
+## Search Strategy
+
+### For the Application of Modern Models on Longitudinal Biomedical/Health Data
+
+#### PubMed
 
 Note: I removed the query I had with specific names of specific statistical models (as the results were too broad and non-specific).
 
-#### Query 2:
+##### Query 2:
 
 (biomedical OR health) AND ((repeated measures) OR (longitudinal study) \BN{OR longitudinal data}) AND ((statistical analyses) OR (statistical analysis)) NOT \BN{\sout{((review) OR
 (meta analysis))}}
@@ -65,7 +164,7 @@ Hits: 12,617
 
 Response to comment: I followed your advice and re-wrote the query, but now I was sure to exclude meta-analysis and review papers by _type of publication_, and papers that are classified in PubMed as devoted to Statistical methodologies (not about application of methods to longitudinal data):
 
-#### Query 3 (modified Query 2):
+##### Query 3 (modified Query 2):
 
 biomedical OR health) AND ((repeated measures) OR (longitudinal study) OR longitudinal data) AND ((statistical analyses) OR (statistical analysis)) NOT (Review[Publication Type] OR Meta analy*[Publication Type]) NOT ( "Statistics as Topic/methods"[Majr] OR "Statistics as Topic/statistics and numerical data"[Majr] OR "Models, Statistical"[Mesh] OR "Research Design"[Mesh])
 
@@ -77,9 +176,9 @@ Papers from this query appear to be good. The query catches many papers from psy
 
 
 
-### Web of Science
+#### Web of Science
 
-#### Query 1:
+##### Query 1:
 
 WC=(biom* OR health OR allergy OR cell biology OR cardio* OR hematology OR immunology OR life sciences biomedicine other topics OR medical informatics OR neuro* OR oncology OR   pharmacology OR radiology, nuclear medicine & medical imaging OR research & experimental medicine OR substance abuse OR optics) AND AK=(longitudinal study OR repeated measures study) NOT ALL=(review OR meta analysis) NOT AK=(model* AND study design) NOT KP=(model)
 
@@ -103,13 +202,13 @@ Hits: 4,595
 I updated this query based on your comments. Now I used NOT but focused on the title (hence, TI) so articles with "review" or "meta analysis" are excluded. An additional filter is that Web of Science allows to select the type of publications so I chose "Article", and this would remove review papers, editorials or other materials that are not research papers.
 
 
-## For Methods on Longitudinal Data
+### For Methods on Longitudinal Data
 
 \BN{you need to describe this part in your objectives}
 
 **I re-wrote the query here based on your comments.** After reading your comments and the queries I created, I realized that the filtering was not correct. I wrote a new query that I believe better represents the terms we want to look at.
 
-#### Query 1:
+##### Query 1:
 
 ("Models, Statistical" [Mesh] OR "Biostatistics/methods"[Mesh]) AND ("Longitudinal Studies"[Mesh]) NOT (Review[Publication Type] OR Meta Analys*[Publication Type] OR "editorial"[Publication Type]) NOT ("survival"[Title/abstract]) NOT ("tutorial"[title/abstract] OR "orientation"[title/abstract]) NOT (Humans[Mesh] OR Adolescent [Mesh] OR Animals[Mesh])
 
@@ -122,9 +221,9 @@ The rationale for this query is to find papers that have been labeled as dealing
 Again, papers that describe the development of new methods for longitudinal data should be relatively few when compared to papers that deal with application, and that is why to me the result of the query (142 hits) makes sense. I did take a look at the papers of this query and all of them seem to be about models, which is what we want.
 
 
-### Web of Science
+#### Web of Science
 
-#### Query 1:
+##### Query 1:
 
 AK=((longitudinal OR repeated measures \BN{sout{OR longitudinal data, already included in longitudinal}}) AND (model
 OR design OR \BN{method})) \sout{NOT ALL=(review OR meta analysis) NOT ALL=(survival
@@ -140,7 +239,7 @@ This query returns papers that deal with methods for longitudinal analysis. Two 
 \BN{we will see when the queries is revised what is the best strategy}
 
 
-#### Query 2 (updated Query 1):
+##### Query 2 (updated Query 1):
 
 I updated the query based on your comments. The query is more specific now, please see below.
 
@@ -154,71 +253,57 @@ Comments:
 
 This query looks for papers where the authors used the keywords longitudinal or repeated measures, and model, or design or method; excludes papers that have "review" or "meta analysis" in the title, excludes those that have keywords of "survival analysis", and searches papers where the main subject has been tagged as statistics or math. Finally, papers that have the word "tutorial" in the abstract are excluded as well.
 
+## Data Collection and Analysis
 
-# Criteria for Study Selection
-
-## For the Application of Modern Statistical Models on Longitudinal Biomedical/Health Data
-
-### Inclusion Criteria
-
-- Articles that:
-
-    - Belong to the biomedical/health sciences fields
-
-    - Describe the collection and analysis of longitudinal data at the preclinical or clinical level
-
-    - Indicate the statistical model used to analyze the data
-    
-    - Report the results of their statistical analyses
-    
-
-### Exclusion Criteria
-
-  - Cross-sectional studies
-
-  - Tutorials that present the application of existing statistical methods to biomedical/health data
-    
-  - Reviews, meta-analyses, or systematic reviews on existing statistical methods for longitudinal data
-    
-  - Studies that use only descriptive statistics to summarize/analyze the data
-    
-
-## For Methods on Longitudinal Data
-
-### Inclusion Criteria
-
-- Articles that:
-
-    - Present new methodologies or significant improvements to existing methods for longitudinal data
-    
-### Exclusion Criteria
-
-
-- Systematic reviews, meta-analyses, or reviews of statistical methods for longitudinal data
-
-
-- Tutorials that present the application of existing statistical methods to biomedical/health longitudinal data
-
-
-# Additional Resources
-
-# Comparison
-
-- Methods most commonly used by researchers to analyze longitudinal data
-
-- Software and packages used (R, SAS, SPSS, etc)
-
-- Increase or decrease in the adoption of modern statistical methods for longitudinal data in the last \approx 20 years (vs rm-ANOVA or non-parametric alternatives)
-
-- Appropriateness of methods used in each case with regard to missing data, non-linear trends, correlation
-
-- Articles that make clear statements about open science and that share resources (data, code, resources sharing) 
-
-# Data Extraction
+### Selection Process and Data Management
 
 Two reviewers will independently analyze the database search results and pre-screen articles based on title and abstract content following the aforementioned inclusion/exclusion criteria. Manuscripts from the database(s) search will be stored in the Covidence platform, where duplicated entries will be removed. For articles where pre-screening inclusion (or exclusion) is unclear based on title and abstract analysis, full-text review will be used to make a decision following review by a third independent reviewer. Manuscripts included after title and abstract pre-screening will be further screening by two reviewers that will independently examine the full text of each article. 
 
-# Data Synthesis Strategy
+### Data Collection Process
+
+Pilot forms (electronic spreadsheets) will be tested using a representative sample of the studies to be reviewed (~100 studies). Information in the forms will be independently included by each reviewer. The forms will be updated (if needed), after the pilot test by consensus between the reviewers.
+
+Information obtained from each study (statistical method used, software, etc.) will be tabulated independently by the reviewers in an electronic spreadsheet.
+
+## Data Items
+
+Aims 1a and 1b:
+
+- Statistical method used
+
+- Sub-area of application (oncology, psychology, public health, etc)
+
+- Computational tool used
+
+- Congruence between statistical method used and the data
+
+- Year of publication
+
+Aim 2:
+
+- Statistical method reported
+
+- Assumptions of the model
+
+- Computational tools available for its implementation
+
+- Year of publication
+
+## Risk of Bias in Individual Studies
+
+N/A
+
+## Data Synthesis
+
+The data from the results of each included study will be extracted into electronic spreadsheets. Summary measures for Aims 1a and 1b include plots (pie, bar, etc) to show the relative use of each statistical method reported, computational tool, and congruence between statistical method and the data. Each plot will be segmented by year to show trends over time.
+
+For Aim 2, a table will be created where statistical method, year of publication, assumptions of the model, and applicability to health data is reported.
+
+
+## Meta-Biases
+
+N/A
+
 
 # References
 
