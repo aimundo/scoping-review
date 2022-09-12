@@ -1,0 +1,243 @@
+---
+title: "Scoping Review Protocol: Statistical Models for Longitudinal Data in Health and Biomedical Research: Current State, Challenges, and Opportunities"
+date: "`r Sys.Date()`"
+author: "Ariel I. Mundo Ortiz"
+affiliation: "Université de Montréal, Montreal, QC, Canada"
+format:
+  pdf:
+    keep-tex: true
+    documentclass: article
+    toc: true
+    number-sections: true
+    colorlinks: true
+    geometry:
+      - top=20mm
+      - left=20mm
+      - heightrounded
+    include-in-header: latex_docs/preamble.sty
+    csl: references/american-medical-association.csl
+    bibliography: references/refs.bib
+---
+
+# Notes
+
+**As of Sept 7, 2022 this document follows the structure recommended by PRISMA-P**
+https://prisma-statement.org/documents/PRISMA-P-checklist.pdf
+
+# Registration
+
+This section will be populated with the registration number and registry name once the protocol is submitted for peer review.
+
+# Author Contributions
+
+- AM: Writing, query design, data extraction and analysis
+.
+.
+.
+
+Other authors to add later
+
+# Amendements
+
+Protocol amendments resulting from peer review will be indicated in this section indicating the date of each amendment.
+
+# Support
+
+This section will indicate the sources of financial or other support for the review
+
+## Sources
+
+# Introduction
+
+## Rationale
+
+Longitudinal studies are frequently used in the health sciences (biomedical research, epidemiology, public health, among others) to examine the temporal effect of a treatment or an intervention [@edwards2000;@zeger1992]. However, the statistical analysis of longitudinal data requires to take into consideration factors such as data missingness, correlation, and non-linear trends [@caruana2015;@mundo2022a], which represent an "analytic cost" associated with the increased complexity of longitudinal data [@zeger1992].
+
+One of the problems derived from the increased complexity of longitudinal data is the misspecification of the statistical models used to analyze such data (i.e., the use of models that are not coherent with the data), a problem that has been shown to occur frequently in the health sciences [@thiese2015]. The problem with model misspecification can be better understood by the fact that historically, the repeated measures ANOVA (rm-ANOVA) has been the preferred method in the health sciences to analyze longitudinal data, despite the fact that the multiple assumptions required by this model are frequently not satisfied by the data collected in longitudinal studies [@mundo2022a]. 
+
+During the last 30 years multiple modern statistical models were developed to address the limitations of rm-ANOVA. Linear mixed models, generalized additive mixed models, and generalized estimating equations are among these modern statistical models developed for longitudinal data [@pinheiro2000;@jiang2021;@hastie2017;@rosa2004;@ballinger2004]. 
+However, the use of such modern statistical methods has been the exception rather than the norm in the health sciences [@gueorguieva2004]. Because the misuse and lack of reproducibility of statistical analyses continue to be major problems in the health sciences [@jarvis2016;@turkiewicz2018;@gosselin2020;@lang2015] there is a need to understand what methods are researchers using now a
+
+In an era where many statistical computational tools are now available to researchers, reproducibility standards vary between each computational tool [@gentleman2007].
+
+
+Additionally, the reproducibility crisis is an ongoing issue in the health sciences [@jarvis2016;@turkiewicz2018], a major component of it being the misuse and lack of reproducibility of statistical analyses [@gosselin2020;@lang2015]. Despite the fact that the landscape of statistical software has vastly increased in the last decade with many statistical computational tools now available to researchers, reproducibility standards vary between each computational tool [@gentleman2007]. Furthermore, there is still high variability in the amount of statistical reporting across journals [@indrayan2020]. Understanding what statistical computational tools are used nowadays by researchers in the health sciences can provide an assessment of the advances in the field towards research reproducibility, while identifying limitations that might still be in place.
+
+#  Objectives
+
+This study aims to:
+
+- Identify the different statistical models for longitudinal data that are used in the health sciences in order to measure the current extent in the adoption of modern statistical methods by the field (Aim 1a)
+
+- Summarize the computational tools used by researchers in the health sciences to statistically analyze longitudinal data to understand the current status of the field with regards to reproducibility. (Aim 1b)
+
+- List statistical methods for longitudinal data developed within the last decade in order to showcase newer methods that may be applicable for longitudinal data in a biomedical/health context. (Aim 2)
+
+
+
+# Review Question
+
+- What are the statistical methods used in biomedical/health sciences research? 
+
+- Has the use of modern statistical methods increased in the field during the last 20 years?
+
+- What computational tools are most commonly used by researchers to analyze longitudinal data, and how in turn this affects reproducibility?
+
+- What are most recent statistical methods developed for longitudinal data, and how can they be applied in the health sciences?
+
+# Methods
+
+## Types of Studies
+
+For all the study aims, studies included in the analysis correspond to peer-reviewed publications in English.
+
+## Eligibility Criteria
+
+### For the Application of Modern Statistical Models on Longitudinal Biomedical/Health Data (Aims 1a and 1b)
+
+#### Inclusion Criteria
+
+- Articles that:
+    
+    - Are written in English 
+
+    - Belong to the biomedical/health sciences fields
+
+    - Describe the collection and analysis of continous or discrete longitudinal data 
+
+    - Indicate the statistical model used to analyze the data
+    
+    - Report the results of their statistical analyses
+    
+
+#### Exclusion Criteria
+
+  - Cross-sectional studies
+
+  - Tutorials that present the application of existing statistical methods to biomedical/health data
+    
+  - Reviews, meta-analyses, or systematic reviews on existing statistical methods for longitudinal data
+    
+  - Studies that use only descriptive statistics to summarize/analyze the data
+  
+  - Studies that collect and analyze categorical data
+    
+
+### For Methods on Longitudinal Data (Aim 2)
+
+#### Inclusion Criteria
+
+- Articles that:
+    
+    - Are written in English
+
+    - Present new methodologies or significant improvements to existing methods for longitudinal data
+    
+#### Exclusion Criteria
+
+
+- Systematic reviews, meta-analyses, or reviews of statistical methods for longitudinal data
+
+
+- Tutorials that present the application of existing statistical methods to biomedical/health longitudinal data
+
+
+
+
+## Information Sources
+
+Studies will be retrieved from PubMed and  Web of Science.
+
+## Search Strategy
+
+### For the Application of Modern Models on Longitudinal Biomedical/Health Data
+
+#### PubMed
+
+##### Query:
+
+(biomedical OR health) AND ((repeated measures) OR (longitudinal study) OR (longitudinal data)) AND ((statistical analyses) OR (statistical analysis)) NOT (Review[Publication Type] OR Meta analy*[Publication Type]) NOT ( "Statistics as Topic/methods"[Majr] OR "Statistics as Topic/statistics and numerical data"[Majr] OR "Models, Statistical"[Mesh] OR "Research Design"[Mesh])
+
+Hits: 10,972
+
+
+#### Web of Science
+
+##### Query:
+
+(ALL=(biomedical) OR ALL=(health)) AND (ALL=(repeated measures) OR ALL=(longitudinal study) OR ALL=(longitudinal data)) AND (ALL=(statistical analyses) OR ALL=(statistical analysis)) AND (DT=(Article)) NOT (WC=(Statistics Probability) OR WC=(Mathematics)) NOT (SU=(Agriculture) AND SU=(Business Economics) AND SU=(Veterinary Sciences) AND SU=(Education Educational Research) AND SU=(Business Economics) AND SU=(Social Sciences Other Topics) AND SU=(Food Science Technology) AND SU=(Anthropology) AND SU=(Linguistics) AND SU=(Sociology) AND SU=(Criminology Penology) AND SU=(Zoology) AND SU=(Meteorology Atmospheric Sciences) AND SU=(Mathematical Methods in Social Sciences) AND SU=(Geology) AND SU=(Construction Building Technology) AND SU=(Geology) AND SU=(Religion) AND SU=(Marine Freshwater Biology) AND SU=(Operations Research Management Science) AND SU=(Fisheries) AND SU=(Metallurgy Metallurgical Engineering))
+
+Hits: 12,458
+
+
+### For Methods on Longitudinal Data
+
+##### Query 1:
+
+("Models, Statistical" [Mesh] OR "Biostatistics/methods"[Mesh]) AND ("Longitudinal Studies"[Mesh]) NOT (Review[Publication Type] OR Meta Analys*[Publication Type] OR "editorial"[Publication Type]) NOT ("survival"[Title/abstract]) NOT ("tutorial"[title/abstract] OR "orientation"[title/abstract]) NOT (Humans[Mesh] OR Adolescent [Mesh] OR Animals[Mesh])
+
+Hits: 142
+
+#### Web of Science
+
+(ALL=(longitudinal studies) OR ALL=(repeated measures)) NOT (TI=(survival)) AND (WC=(Statistics Probability) OR (WC=Mathematics) OR (WC=Mathematics Applied))
+
+Hits: 8,135
+
+
+## Data Collection and Analysis
+
+### Selection Process and Data Management
+
+Two reviewers will independently analyze the database search results and pre-screen articles based on title and abstract content following the aforementioned inclusion/exclusion criteria. Manuscripts from the database(s) search will be stored in the Covidence platform, where duplicated entries will be removed. For articles where pre-screening inclusion (or exclusion) is unclear based on title and abstract analysis, full-text review will be used to make a decision following review by a third independent reviewer. Manuscripts included after title and abstract pre-screening will be further screening by two reviewers that will independently examine the full text of each article. 
+
+### Data Collection Process
+
+Pilot forms (electronic spreadsheets) will be tested using a representative sample of the studies to be reviewed (~100 studies). Information in the forms will be independently included by each reviewer. The forms will be updated (if needed), after the pilot test by consensus between the reviewers.
+
+Information obtained from each study (statistical method used, software, etc.) will be tabulated independently by the reviewers in an electronic spreadsheet.
+
+## Data Items
+
+Aims 1a and 1b:
+
+- Statistical method used
+
+- Sub-area of application (oncology, psychology, public health, etc)
+
+- Computational tool used
+
+- Congruence between statistical method used and the data
+
+- Year of publication
+
+Aim 2:
+
+- Statistical method reported
+
+- Assumptions of the model
+
+- Computational tools available for its implementation
+
+- Year of publication
+
+## Risk of Bias in Individual Studies
+
+N/A
+
+## Data Synthesis
+
+The data from the results of each included study will be extracted into electronic spreadsheets. Summary measures for Aims 1a and 1b include plots (pie, bar, etc) to show the relative use of each statistical method reported, computational tool, and congruence between statistical method and the data. Each plot will be segmented by year to show trends over time.
+
+For Aim 2, a table will be created where statistical method, year of publication, assumptions of the model, and applicability to health data is reported.
+
+
+## Meta-Biases
+
+N/A
+
+
+# References
+
+::: {#refs}
+:::
