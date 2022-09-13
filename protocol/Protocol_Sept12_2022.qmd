@@ -51,17 +51,14 @@ This section will indicate the sources of financial or other support for the rev
 
 ## Rationale
 
-Longitudinal studies are frequently used in the health sciences (biomedical research, epidemiology, public health, among others) to examine the temporal effect of a treatment or an intervention [@edwards2000;@zeger1992]. However, the statistical analysis of longitudinal data requires to take into consideration factors such as data missingness, correlation, and non-linear trends [@caruana2015;@mundo2022a], which represent an "analytic cost" associated with the increased complexity of longitudinal data [@zeger1992].
+Longitudinal studies are frequently used in the health sciences (biomedical research, epidemiology, public health, among others) to examine the temporal effect of a treatment or intervention [@edwards2000;@zeger1992]. However, the statistical analysis of longitudinal data requires to take into consideration factors such as data missingness, correlation, and non-linear trends [@caruana2015;@mundo2022a], which represent an "analytic cost" associated with the complexity of longitudinal data [@zeger1992].
 
-One of the problems derived from the increased complexity of longitudinal data is the misspecification of the statistical models used to analyze such data (i.e., the use of models that are not coherent with the data), a problem that has been shown to occur frequently in the health sciences [@thiese2015]. The problem with model misspecification can be better understood by the fact that historically, the repeated measures ANOVA (rm-ANOVA) has been the preferred method in the health sciences to analyze longitudinal data, despite the fact that the multiple assumptions required by this model are frequently not satisfied by the data collected in longitudinal studies [@mundo2022a]. 
+One of the problems derived from the "analytic cost" of longitudinal data pertains the misspecification of the statistical models used to analyze such data (i.e., the use of models that are not coherent with the data), a problem that has been shown to occur frequently in the health sciences [@thiese2015]. This problem with model misspecification can be linked to a historical preference by researchers to use the repeated measures analysis of variance (rm-ANOVA) as the default method to analyze longitudinal data, despite the fact that the multiple assumptions required by this model are frequently not satisfied by the data collected in longitudinal studies [@mundo2022a]. 
 
-During the last 30 years multiple modern statistical models were developed to address the limitations of rm-ANOVA. Linear mixed models, generalized additive mixed models, and generalized estimating equations are among these modern statistical models developed for longitudinal data [@pinheiro2000;@jiang2021;@hastie2017;@rosa2004;@ballinger2004]. 
-However, the use of such modern statistical methods has been the exception rather than the norm in the health sciences [@gueorguieva2004]. Because the misuse and lack of reproducibility of statistical analyses continue to be major problems in the health sciences [@jarvis2016;@turkiewicz2018;@gosselin2020;@lang2015] there is a need to understand what methods are researchers using now a
+On the other hand, multiple modern statistical models were developed during the last 30 years to address the limitations of rm-ANOVA. Linear mixed models, generalized additive mixed models, and generalized estimating equations are among these modern statistical models developed for longitudinal data [@pinheiro2000;@jiang2021;@hastie2017;@rosa2004;@ballinger2004]. 
+However, the use of such modern statistical methods has been the exception rather than the norm in the health sciences [@gueorguieva2004], even on this day and age where these modern methods have been brought to a wider audience with the development of computational tools such as Python or R. 
 
-In an era where many statistical computational tools are now available to researchers, reproducibility standards vary between each computational tool [@gentleman2007].
-
-
-Additionally, the reproducibility crisis is an ongoing issue in the health sciences [@jarvis2016;@turkiewicz2018], a major component of it being the misuse and lack of reproducibility of statistical analyses [@gosselin2020;@lang2015]. Despite the fact that the landscape of statistical software has vastly increased in the last decade with many statistical computational tools now available to researchers, reproducibility standards vary between each computational tool [@gentleman2007]. Furthermore, there is still high variability in the amount of statistical reporting across journals [@indrayan2020]. Understanding what statistical computational tools are used nowadays by researchers in the health sciences can provide an assessment of the advances in the field towards research reproducibility, while identifying limitations that might still be in place.
+Unfortunately, the misuse and lack of reproducibility of statistical analyses continue to be major problems in the health sciences [@jarvis2016;@turkiewicz2018;@gosselin2020;@lang2015]. In the case of longitudinal data, where modern methods exist beyond rm-ANOVA that can help researchers obtain better inference from their data, there is a need to understand what are the trends in the adoption of these statistical methods in the health sciences to measure the adoption of reproducibility practices by the field at large, while also identifying the reasons that may cause researchers use avoid the use of modern statistical methods for longitudinal data.
 
 #  Objectives
 
@@ -99,28 +96,12 @@ For all the study aims, studies included in the analysis correspond to peer-revi
 
 - Articles that:
     
-    - Are written in English 
-
-    - Belong to the biomedical/health sciences fields
-
-    - Describe the collection and analysis of continous or discrete longitudinal data 
-
-    - Indicate the statistical model used to analyze the data
-    
-    - Report the results of their statistical analyses
+Are written in English, belong to the biomedical/health sciences fields, describe the collection and analysis of continous or discrete longitudinal data, indicate the statistical model used to analyze the data, report the results of their statistical analyses.
     
 
 #### Exclusion Criteria
 
-  - Cross-sectional studies
-
-  - Tutorials that present the application of existing statistical methods to biomedical/health data
-    
-  - Reviews, meta-analyses, or systematic reviews on existing statistical methods for longitudinal data
-    
-  - Studies that use only descriptive statistics to summarize/analyze the data
-  
-  - Studies that collect and analyze categorical data
+Cross-sectional studies, tutorials that present the application of existing statistical methods to biomedical/health data, reviews, meta-analyses, or systematic reviews on existing statistical methods for longitudinal data, studies that use only descriptive statistics to summarize/analyze the data, studies that collect and analyze categorical data.
     
 
 ### For Methods on Longitudinal Data (Aim 2)
@@ -129,19 +110,11 @@ For all the study aims, studies included in the analysis correspond to peer-revi
 
 - Articles that:
     
-    - Are written in English
-
-    - Present new methodologies or significant improvements to existing methods for longitudinal data
+Are written in English, present new methodologies or significant improvements to existing methods for longitudinal data.
     
 #### Exclusion Criteria
 
-
-- Systematic reviews, meta-analyses, or reviews of statistical methods for longitudinal data
-
-
-- Tutorials that present the application of existing statistical methods to biomedical/health longitudinal data
-
-
+Systematic reviews, meta-analyses, or reviews of statistical methods for longitudinal data, tutorials that present the application of existing statistical methods to biomedical/health longitudinal data.
 
 
 ## Information Sources
@@ -227,7 +200,9 @@ N/A
 
 ## Data Synthesis
 
-The data from the results of each included study will be extracted into electronic spreadsheets. Summary measures for Aims 1a and 1b include plots (pie, bar, etc) to show the relative use of each statistical method reported, computational tool, and congruence between statistical method and the data. Each plot will be segmented by year to show trends over time.
+The data from the results of each included study will be extracted into electronic spreadsheets. Summary measures for Aims 1a and 1b include plots (pie, bar, etc.) to show the relative use of each statistical method reported, computational tool, and congruence between statistical method and the data. Each plot will be segmented by year to show trends over time.
+
+An example of 
 
 For Aim 2, a table will be created where statistical method, year of publication, assumptions of the model, and applicability to health data is reported.
 
