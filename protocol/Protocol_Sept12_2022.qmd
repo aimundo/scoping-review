@@ -93,10 +93,8 @@ For all the study aims, studies included in the analysis correspond to peer-revi
 ### For the Application of Modern Statistical Models on Longitudinal Biomedical/Health Data (Aims 1a and 1b)
 
 #### Inclusion Criteria
-
-- Articles that:
     
-Are written in English, belong to the biomedical/health sciences fields, describe the collection and analysis of continous or discrete longitudinal data, indicate the statistical model used to analyze the data, report the results of their statistical analyses.
+Articles that are written in English, belong to the biomedical/health sciences fields, describe the collection and analysis of continous or discrete longitudinal data, indicate the statistical model used to analyze the data, and report the results of their statistical analyses.
     
 
 #### Exclusion Criteria
@@ -123,6 +121,8 @@ Studies will be retrieved from PubMed and  Web of Science.
 
 ## Search Strategy
 
+PubMed and Web of Science databases will be used. Below the full search strategy for PubMed is presented for all the aims of the scoping review.
+
 ### For the Application of Modern Models on Longitudinal Biomedical/Health Data
 
 #### PubMed
@@ -133,30 +133,16 @@ Studies will be retrieved from PubMed and  Web of Science.
 
 Hits: 10,972
 
-
-#### Web of Science
-
-##### Query:
-
-(ALL=(biomedical) OR ALL=(health)) AND (ALL=(repeated measures) OR ALL=(longitudinal study) OR ALL=(longitudinal data)) AND (ALL=(statistical analyses) OR ALL=(statistical analysis)) AND (DT=(Article)) NOT (WC=(Statistics Probability) OR WC=(Mathematics)) NOT (SU=(Agriculture) AND SU=(Business Economics) AND SU=(Veterinary Sciences) AND SU=(Education Educational Research) AND SU=(Business Economics) AND SU=(Social Sciences Other Topics) AND SU=(Food Science Technology) AND SU=(Anthropology) AND SU=(Linguistics) AND SU=(Sociology) AND SU=(Criminology Penology) AND SU=(Zoology) AND SU=(Meteorology Atmospheric Sciences) AND SU=(Mathematical Methods in Social Sciences) AND SU=(Geology) AND SU=(Construction Building Technology) AND SU=(Geology) AND SU=(Religion) AND SU=(Marine Freshwater Biology) AND SU=(Operations Research Management Science) AND SU=(Fisheries) AND SU=(Metallurgy Metallurgical Engineering))
-
-Hits: 12,458
-
-
 ### For Methods on Longitudinal Data
+
+
+#### PubMed
 
 ##### Query 1:
 
 ("Models, Statistical" [Mesh] OR "Biostatistics/methods"[Mesh]) AND ("Longitudinal Studies"[Mesh]) NOT (Review[Publication Type] OR Meta Analys*[Publication Type] OR "editorial"[Publication Type]) NOT ("survival"[Title/abstract]) NOT ("tutorial"[title/abstract] OR "orientation"[title/abstract]) NOT (Humans[Mesh] OR Adolescent [Mesh] OR Animals[Mesh])
 
 Hits: 142
-
-#### Web of Science
-
-(ALL=(longitudinal studies) OR ALL=(repeated measures)) NOT (TI=(survival)) AND (WC=(Statistics Probability) OR (WC=Mathematics) OR (WC=Mathematics Applied))
-
-Hits: 8,135
-
 
 ## Data Collection and Analysis
 
@@ -174,25 +160,11 @@ Information obtained from each study (statistical method used, software, etc.) w
 
 Aims 1a and 1b:
 
-- Statistical method used
-
-- Sub-area of application (oncology, psychology, public health, etc)
-
-- Computational tool used
-
-- Congruence between statistical method used and the data
-
-- Year of publication
+Statistical method used, sub-area of application (oncology, psychology, public health, etc), computational tool used, congruence between statistical method used and the data, year of publication
 
 Aim 2:
 
-- Statistical method reported
-
-- Assumptions of the model
-
-- Computational tools available for its implementation
-
-- Year of publication
+Statistical method reported, assumptions of the model, computational tools available for its implementation, year of publication
 
 ## Risk of Bias in Individual Studies
 
@@ -200,9 +172,11 @@ N/A
 
 ## Data Synthesis
 
-The data from the results of each included study will be extracted into electronic spreadsheets. Summary measures for Aims 1a and 1b include plots (pie, bar, etc.) to show the relative use of each statistical method reported, computational tool, and congruence between statistical method and the data. Each plot will be segmented by year to show trends over time.
+The data from the results of each included study will be extracted into electronic spreadsheets. Summary measures for Aims 1a and 1b include plots (pie, bar, etc.) to show the relative use of each statistical method reported, computational tool, and congruence between statistical method and the data. Each plot will be segmented by year to show trends over time. @tbl-spreadsheet presents the headers of the pilot electronic spreadsheet.
 
-An example of 
+The pilot electronic spreadsheet can be found in the following link: \href{https://udemontreal-my.sharepoint.com/:x:/g/personal/ariel_mundo_ortiz_umontreal_ca/EUr53h3HnMBLhRohYMqYmp0Bzf1UY7ncKTvm2RkPf9Wt3w?e=cMdhdw}{Pilot Spreadsheet}
+
+
 
 For Aim 2, a table will be created where statistical method, year of publication, assumptions of the model, and applicability to health data is reported.
 
@@ -216,3 +190,30 @@ N/A
 
 ::: {#refs}
 :::
+
+
+
+```{r}
+#| echo: false
+#| label: tbl-spreadsheet
+#| tbl-cap: "Pilot spreadsheet for data extraction"
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(kableExtra)
+
+options(knitr.kable.NA='')
+
+    kable(x=matrix(,nrow=1,ncol=14),
+      booktabs=TRUE,
+          #longtable=TRUE,
+        escape=FALSE,
+        align="c",
+        format="latex",
+        col.names=linebreak(c('DOI','Title','Subfield','Journal','Question','Country','Source of Result \n(Data)','Year','Statistical\nMethod','Software','Model assumptions\nchecked?','Data/Model\nCongruency?','Code available?','Notes'))) %>%
+    row_spec(0,bold=T,color="black")%>%
+      kable_styling(latex_options = c("scale_down"))%>%
+      landscape()
+     
+```

@@ -1,0 +1,642 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[top=20mm,left=20mm,heightrounded]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\usepackage{lineno}
+\usepackage{setspace}
+\linenumbers
+\doublespacing
+
+%Commands for Comments from BN
+
+%\newcommand{\BN}[1]{\textcolor{red}{#1}}
+%\usepackage{ulem}
+%\pdfstringdefDisableCommands{\let\sout\relax}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Scoping Review Protocol: Statistical Models for Longitudinal Data in Health and Biomedical Research: Current State, Challenges, and Opportunities},
+  pdfauthor={Ariel I. Mundo Ortiz},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Scoping Review Protocol: Statistical Models for Longitudinal Data
+in Health and Biomedical Research: Current State, Challenges, and
+Opportunities}
+\author{Ariel I. Mundo Ortiz}
+\date{2022-09-13}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, enhanced, sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden, boxrule=0pt, interior hidden]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\hypertarget{notes}{%
+\section{Notes}\label{notes}}
+
+\textbf{As of Sept 7, 2022 this document follows the structure
+recommended by PRISMA-P}
+https://prisma-statement.org/documents/PRISMA-P-checklist.pdf
+
+\hypertarget{registration}{%
+\section{Registration}\label{registration}}
+
+This section will be populated with the registration number and registry
+name once the protocol is submitted for peer review.
+
+\hypertarget{author-contributions}{%
+\section{Author Contributions}\label{author-contributions}}
+
+\begin{itemize}
+\tightlist
+\item
+  AM: Writing, query design, data extraction and analysis . . .
+\end{itemize}
+
+Other authors to add later
+
+\hypertarget{amendements}{%
+\section{Amendements}\label{amendements}}
+
+Protocol amendments resulting from peer review will be indicated in this
+section indicating the date of each amendment.
+
+\hypertarget{support}{%
+\section{Support}\label{support}}
+
+This section will indicate the sources of financial or other support for
+the review
+
+\hypertarget{sources}{%
+\subsection{Sources}\label{sources}}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+\hypertarget{rationale}{%
+\subsection{Rationale}\label{rationale}}
+
+Longitudinal studies are frequently used in the health sciences
+(biomedical research, epidemiology, public health, among others) to
+examine the temporal effect of a treatment or
+intervention\textsuperscript{1,2}. However, the statistical analysis of
+longitudinal data requires to take into consideration factors such as
+data missingness, correlation, and non-linear
+trends\textsuperscript{3,4}, which represent an ``analytic cost''
+associated with the complexity of longitudinal data\textsuperscript{2}.
+
+One of the problems derived from the ``analytic cost'' of longitudinal
+data pertains the misspecification of the statistical models used to
+analyze such data (i.e., the use of models that are not coherent with
+the data), a problem that has been shown to occur frequently in the
+health sciences\textsuperscript{5}. This problem with model
+misspecification can be linked to a historical preference by researchers
+to use the repeated measures analysis of variance (rm-ANOVA) as the
+default method to analyze longitudinal data, despite the fact that the
+multiple assumptions required by this model are frequently not satisfied
+by the data collected in longitudinal studies\textsuperscript{4}.
+
+On the other hand, multiple modern statistical models were developed
+during the last 30 years to address the limitations of rm-ANOVA. Linear
+mixed models, generalized additive mixed models, and generalized
+estimating equations are among these modern statistical models developed
+for longitudinal data\textsuperscript{6--10}. However, the use of such
+modern statistical methods has been the exception rather than the norm
+in the health sciences\textsuperscript{11}, even on this day and age
+where these modern methods have been brought to a wider audience with
+the development of computational tools such as Python or R.
+
+Unfortunately, the misuse and lack of reproducibility of statistical
+analyses continue to be major problems in the health
+sciences\textsuperscript{12--15}. In the case of longitudinal data,
+where modern methods exist beyond rm-ANOVA that can help researchers
+obtain better inference from their data, there is a need to understand
+what are the trends in the adoption of these statistical methods in the
+health sciences to measure the adoption of reproducibility practices by
+the field at large, while also identifying the reasons that may cause
+researchers use avoid the use of modern statistical methods for
+longitudinal data.
+
+\hypertarget{objectives}{%
+\section{Objectives}\label{objectives}}
+
+This study aims to:
+
+\begin{itemize}
+\item
+  Identify the different statistical models for longitudinal data that
+  are used in the health sciences in order to measure the current extent
+  in the adoption of modern statistical methods by the field (Aim 1a)
+\item
+  Summarize the computational tools used by researchers in the health
+  sciences to statistically analyze longitudinal data to understand the
+  current status of the field with regards to reproducibility. (Aim 1b)
+\item
+  List statistical methods for longitudinal data developed within the
+  last decade in order to showcase newer methods that may be applicable
+  for longitudinal data in a biomedical/health context. (Aim 2)
+\end{itemize}
+
+\hypertarget{review-question}{%
+\section{Review Question}\label{review-question}}
+
+\begin{itemize}
+\item
+  What are the statistical methods used in biomedical/health sciences
+  research?
+\item
+  Has the use of modern statistical methods increased in the field
+  during the last 20 years?
+\item
+  What computational tools are most commonly used by researchers to
+  analyze longitudinal data, and how in turn this affects
+  reproducibility?
+\item
+  What are most recent statistical methods developed for longitudinal
+  data, and how can they be applied in the health sciences?
+\end{itemize}
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+\hypertarget{types-of-studies}{%
+\subsection{Types of Studies}\label{types-of-studies}}
+
+For all the study aims, studies included in the analysis correspond to
+peer-reviewed publications in English.
+
+\hypertarget{eligibility-criteria}{%
+\subsection{Eligibility Criteria}\label{eligibility-criteria}}
+
+\hypertarget{for-the-application-of-modern-statistical-models-on-longitudinal-biomedicalhealth-data-aims-1a-and-1b}{%
+\subsubsection{For the Application of Modern Statistical Models on
+Longitudinal Biomedical/Health Data (Aims 1a and
+1b)}\label{for-the-application-of-modern-statistical-models-on-longitudinal-biomedicalhealth-data-aims-1a-and-1b}}
+
+\hypertarget{inclusion-criteria}{%
+\paragraph{Inclusion Criteria}\label{inclusion-criteria}}
+
+Articles that are written in English, belong to the biomedical/health
+sciences fields, describe the collection and analysis of continous or
+discrete longitudinal data, indicate the statistical model used to
+analyze the data, and report the results of their statistical analyses.
+
+\hypertarget{exclusion-criteria}{%
+\paragraph{Exclusion Criteria}\label{exclusion-criteria}}
+
+Cross-sectional studies, tutorials that present the application of
+existing statistical methods to biomedical/health data, reviews,
+meta-analyses, or systematic reviews on existing statistical methods for
+longitudinal data, studies that use only descriptive statistics to
+summarize/analyze the data, studies that collect and analyze categorical
+data.
+
+\hypertarget{for-methods-on-longitudinal-data-aim-2}{%
+\subsubsection{For Methods on Longitudinal Data (Aim
+2)}\label{for-methods-on-longitudinal-data-aim-2}}
+
+\hypertarget{inclusion-criteria-1}{%
+\paragraph{Inclusion Criteria}\label{inclusion-criteria-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  Articles that:
+\end{itemize}
+
+Are written in English, present new methodologies or significant
+improvements to existing methods for longitudinal data.
+
+\hypertarget{exclusion-criteria-1}{%
+\paragraph{Exclusion Criteria}\label{exclusion-criteria-1}}
+
+Systematic reviews, meta-analyses, or reviews of statistical methods for
+longitudinal data, tutorials that present the application of existing
+statistical methods to biomedical/health longitudinal data.
+
+\hypertarget{information-sources}{%
+\subsection{Information Sources}\label{information-sources}}
+
+Studies will be retrieved from PubMed and Web of Science.
+
+\hypertarget{search-strategy}{%
+\subsection{Search Strategy}\label{search-strategy}}
+
+PubMed and Web of Science databases will be used. Below the full search
+strategy for PubMed is presented for all the aims of the scoping review.
+
+\hypertarget{for-the-application-of-modern-models-on-longitudinal-biomedicalhealth-data}{%
+\subsubsection{For the Application of Modern Models on Longitudinal
+Biomedical/Health
+Data}\label{for-the-application-of-modern-models-on-longitudinal-biomedicalhealth-data}}
+
+\hypertarget{pubmed}{%
+\paragraph{PubMed}\label{pubmed}}
+
+\hypertarget{query}{%
+\subparagraph{Query:}\label{query}}
+
+(biomedical OR health) AND ((repeated measures) OR (longitudinal study)
+OR (longitudinal data)) AND ((statistical analyses) OR (statistical
+analysis)) NOT (Review{[}Publication Type{]} OR Meta
+analy*{[}Publication Type{]}) NOT ( ``Statistics as
+Topic/methods''{[}Majr{]} OR ``Statistics as Topic/statistics and
+numerical data''{[}Majr{]} OR ``Models, Statistical''{[}Mesh{]} OR
+``Research Design''{[}Mesh{]})
+
+Hits: 10,972
+
+\hypertarget{for-methods-on-longitudinal-data}{%
+\subsubsection{For Methods on Longitudinal
+Data}\label{for-methods-on-longitudinal-data}}
+
+\hypertarget{pubmed-1}{%
+\paragraph{PubMed}\label{pubmed-1}}
+
+\hypertarget{query-1}{%
+\subparagraph{Query 1:}\label{query-1}}
+
+(``Models, Statistical'' {[}Mesh{]} OR
+``Biostatistics/methods''{[}Mesh{]}) AND (``Longitudinal
+Studies''{[}Mesh{]}) NOT (Review{[}Publication Type{]} OR Meta
+Analys*{[}Publication Type{]} OR ``editorial''{[}Publication Type{]})
+NOT (``survival''{[}Title/abstract{]}) NOT
+(``tutorial''{[}title/abstract{]} OR
+``orientation''{[}title/abstract{]}) NOT (Humans{[}Mesh{]} OR Adolescent
+{[}Mesh{]} OR Animals{[}Mesh{]})
+
+Hits: 142
+
+\hypertarget{data-collection-and-analysis}{%
+\subsection{Data Collection and
+Analysis}\label{data-collection-and-analysis}}
+
+\hypertarget{selection-process-and-data-management}{%
+\subsubsection{Selection Process and Data
+Management}\label{selection-process-and-data-management}}
+
+Two reviewers will independently analyze the database search results and
+pre-screen articles based on title and abstract content following the
+aforementioned inclusion/exclusion criteria. Manuscripts from the
+database(s) search will be stored in the Covidence platform, where
+duplicated entries will be removed. For articles where pre-screening
+inclusion (or exclusion) is unclear based on title and abstract
+analysis, full-text review will be used to make a decision following
+review by a third independent reviewer. Manuscripts included after title
+and abstract pre-screening will be further screening by two reviewers
+that will independently examine the full text of each article.
+
+\hypertarget{data-collection-process}{%
+\subsubsection{Data Collection Process}\label{data-collection-process}}
+
+Pilot forms (electronic spreadsheets) will be tested using a
+representative sample of the studies to be reviewed (\textasciitilde100
+studies). Information in the forms will be independently included by
+each reviewer. The forms will be updated (if needed), after the pilot
+test by consensus between the reviewers.
+
+Information obtained from each study (statistical method used, software,
+etc.) will be tabulated independently by the reviewers in an electronic
+spreadsheet.
+
+\hypertarget{data-items}{%
+\subsection{Data Items}\label{data-items}}
+
+Aims 1a and 1b:
+
+Statistical method used, sub-area of application (oncology, psychology,
+public health, etc), computational tool used, congruence between
+statistical method used and the data, year of publication
+
+Aim 2:
+
+Statistical method reported, assumptions of the model, computational
+tools available for its implementation, year of publication
+
+\hypertarget{risk-of-bias-in-individual-studies}{%
+\subsection{Risk of Bias in Individual
+Studies}\label{risk-of-bias-in-individual-studies}}
+
+N/A
+
+\hypertarget{data-synthesis}{%
+\subsection{Data Synthesis}\label{data-synthesis}}
+
+The data from the results of each included study will be extracted into
+electronic spreadsheets. Summary measures for Aims 1a and 1b include
+plots (pie, bar, etc.) to show the relative use of each statistical
+method reported, computational tool, and congruence between statistical
+method and the data. Each plot will be segmented by year to show trends
+over time. Table~\ref{tbl-spreadsheet} presents the headers of the pilot
+electronic spreadsheet.
+
+The pilot electronic spreadsheet can be found in the following link:
+\href{https://udemontreal-my.sharepoint.com/:x:/g/personal/ariel_mundo_ortiz_umontreal_ca/EUr53h3HnMBLhRohYMqYmp0Bzf1UY7ncKTvm2RkPf9Wt3w?e=cMdhdw}{Pilot Spreadsheet}
+
+For Aim 2, a table will be created where statistical method, year of
+publication, assumptions of the model, and applicability to health data
+is reported.
+
+\hypertarget{meta-biases}{%
+\subsection{Meta-Biases}\label{meta-biases}}
+
+N/A
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-edwards2000}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Edwards LJ. Modern statistical techniques for the
+analysis of longitudinal data in biomedical research. \emph{Pediatric
+Pulmonology}. 2000;30(4):330-344.
+doi:\url{https://doi.org/10.1002/1099-0496(200010)30:4\%3C330::AID-PPUL10\%3E3.0.CO;2-D}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zeger1992}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Zeger SL, Liang K-Y. An overview of methods for the
+analysis of longitudinal data. \emph{Statistics in Medicine}.
+1992;11(14-15):1825-1839.
+doi:\url{https://doi.org/10.1002/sim.4780111406}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-caruana2015}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Caruana EJ, Roman M, Hernández-Sánchez J, Solli P.
+Longitudinal studies. \emph{Journal of Thoracic Disease}.
+2015;7(11):E537-40.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mundo2022a}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Mundo AI, Tipton JR, Muldoon TJ. Generalized additive
+models to analyze nonlinear trends in biomedical longitudinal data using
+r: Beyond repeated measures {ANOVA} and linear mixed models.
+\emph{Statistics in Medicine}. Published online July 2022.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-thiese2015}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Thiese MS, Arnold ZC, Walker SD. The misuse and abuse of
+statistics in biomedical research. \emph{Biochem Med (Zagreb)}.
+2015;25(1):5-11.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pinheiro2000}{}}%
+\CSLLeftMargin{6. }%
+\CSLRightInline{Linear mixed-effects models: Basic concepts and
+examples. In: \emph{Mixed-Effects Models in s and s-PLUS}. Springer New
+York; 2000:3-56.
+doi:\href{https://doi.org/10.1007/0-387-22747-4_1}{10.1007/0-387-22747-4\_1}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-jiang2021}{}}%
+\CSLLeftMargin{7. }%
+\CSLRightInline{Jiang J, Nguyen T. \emph{Linear and Generalized Linear
+Mixed Models and Their Applications}. 2nd ed. Springer; 2021.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-hastie2017}{}}%
+\CSLLeftMargin{8. }%
+\CSLRightInline{Hastie TJ. \emph{Statistical Models in {S}}. (Chambers
+JM, Hastie TJ, eds.). Routledge; 2017.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-rosa2004}{}}%
+\CSLLeftMargin{9. }%
+\CSLRightInline{Rosa GJM, Gianola D, Padovani CR. Bayesian longitudinal
+data analysis with mixed models and thick-tailed distributions using
+{MCMC}. \emph{Journal of Applied Statistics}. 2004;31(7):855-873.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ballinger2004}{}}%
+\CSLLeftMargin{10. }%
+\CSLRightInline{Ballinger GA. Using generalized estimating equations for
+longitudinal data analysis. \emph{Organizational Research Methods}.
+2004;7(2):127-150.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-gueorguieva2004}{}}%
+\CSLLeftMargin{11. }%
+\CSLRightInline{Gueorguieva R, Krystal JH. {Move Over ANOVA: Progress in
+Analyzing Repeated-Measures Data andIts Reflection in Papers Published
+in the Archives of General Psychiatry}. \emph{Archives of General
+Psychiatry}. 2004;61(3):310-317.
+doi:\href{https://doi.org/10.1001/archpsyc.61.3.310}{10.1001/archpsyc.61.3.310}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-jarvis2016}{}}%
+\CSLLeftMargin{12. }%
+\CSLRightInline{Jarvis MF, Williams M. Irreproducibility in preclinical
+biomedical research: Perceptions, uncertainties, and knowledge gaps.
+\emph{Trends in Pharmacological Sciences}. 2016;37(4):290-302.
+doi:\url{https://doi.org/10.1016/j.tips.2015.12.001}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-turkiewicz2018}{}}%
+\CSLLeftMargin{13. }%
+\CSLRightInline{Turkiewicz A, Luta G, Hughes HV, Ranstam J. Statistical
+mistakes and how to avoid them {\textendash} lessons learned from the
+reproducibility crisis. \emph{Osteoarthritis and Cartilage}.
+2018;26(11):1409-1411.
+doi:\href{https://doi.org/10.1016/j.joca.2018.07.017}{10.1016/j.joca.2018.07.017}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-gosselin2020}{}}%
+\CSLLeftMargin{14. }%
+\CSLRightInline{Gosselin R-D. Statistical analysis must improve to
+address the reproducibility crisis: The {ACcess} to transparent
+statistics ({ACTS}) call to action. \emph{Bioessays}.
+2020;42(1):e1900189.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-lang2015}{}}%
+\CSLLeftMargin{15. }%
+\CSLRightInline{Lang TA, Altman DG. Basic statistical reporting for
+articles published in biomedical journals: The {``statistical analyses
+and methods in the published literature''} or the {SAMPL} guidelines.
+\emph{Int J Nurs Stud}. 2015;52(1):5-9.}
+
+\end{CSLReferences}
+
+\hypertarget{tbl-spreadsheet}{}
+\begin{landscape}\begin{table}
+\caption{\label{tbl-spreadsheet}Pilot spreadsheet for data extraction }\tabularnewline
+
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{cccccccccccccc}
+\toprule
+\textcolor{black}{\textbf{DOI}} & \textcolor{black}{\textbf{Title}} & \textcolor{black}{\textbf{Subfield}} & \textcolor{black}{\textbf{Journal}} & \textcolor{black}{\textbf{Question}} & \textcolor{black}{\textbf{Country}} & \textcolor{black}{\textbf{\makecell[l]{Source of Result \\(Data)}}} & \textcolor{black}{\textbf{Year}} & \textcolor{black}{\textbf{\makecell[r]{Statistical\\Method}}} & \textcolor{black}{\textbf{Software}} & \textcolor{black}{\textbf{\makecell[c]{Model assumptions\\checked?}}} & \textcolor{black}{\textbf{\makecell[r]{Data/Model\\Congruency?}}} & \textcolor{black}{\textbf{Code available?}} & \textcolor{black}{\textbf{Notes}}\\
+\midrule
+ &  &  &  &  &  &  &  &  &  &  &  &  & \\
+\bottomrule
+\end{tabular}}
+\end{table}
+\end{landscape}
+
+
+
+\end{document}
